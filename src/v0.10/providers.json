@@ -92,6 +92,15 @@
     },
     {
       "type": "provider",
+      "id": "odbx",
+      "attributes": {
+        "name": "open database of xtals",
+        "description": "",
+        "base_url": "http://odbx.science/optimade"
+      }
+    },
+    {
+      "type": "provider",
       "id": "omdb",
       "attributes": {
         "name": "open materials database",
