@@ -1,25 +1,25 @@
 # OPTiMaDe Providers Index Meta-Database
 
-This repository hosts the providers.json file for OPTiMaDe that lists reserved database-specific prefixes and URLs to the index databases of all database providers that participate in the OPTiMaDe network.
+The list of OPTiMaDe providers keeps track of all reserved database-specific prefixes and the URLs to the index databases of all OPTiMaDe database providers that participate in the [OPTiMaDe network](https://www.optimade.org/).
 
-The repository is published in form of a statically hosted OPTiMaDe Index Meta-Database here:
+The list of providers is published in the form of a statically hosted OPTiMaDe Index Meta-Database here:
 
 - https://www.optimade.org/providers/
 
-If you seek specifically the current contents of the providers.json file for the latest version of the OPTiMaDe specification, you can access it using this URL:
+If you specifically seek the current list of providers for the latest version of the OPTiMaDe specification, you can access it at this URL:
 
 - https://www.optimade.org/providers/links/
 
-If you seek the current contents of the providers.json file for any older version of the OPTiMaDe specification, you can access it using this URL:
+If you seek the current list of providers for any older version of the OPTiMaDe specification, you can access it using this URL:
 
-- https://www.optimade.org/providers/*<version>*/links/
+- https://www.optimade.org/providers/*\<version\>*/links/
 
 
 ## Repository organization
 
 The OPTiMaDe providers repository is hosted here: https://github.com/Materials-Consortia/providers
 
-The paths are organized this way:
+The paths in the repository are organized this way:
 
 - `src/<version>/providers.json` is the current providers.json file formatted according to OPTiMaDe version `<version>`.
 
@@ -28,5 +28,5 @@ The paths are organized this way:
 - `<version>`: every released version of the OPTiMaDe specification gets a subdirectory organized to confirm with the URLs as defined for an OPTiMaDe base url. The `<version>/links/index.html` is a symbolic link to `src/<version>/providers.json`.
 
 To update the list of providers, please file a pull-request against the repository.
-A PR MUST update ALL provider.json files `src/<version>/providers.json`.
-This updates the current list of providers for implementations of all versions of the OPTiMaDe protocol.
+This pull-request MUST update ALL the provider.json files `src/<version>/providers.json`.
+This way, the current list of providers is updated for implementations across all versions of the OPTiMaDe protocol.
