@@ -12,7 +12,7 @@ If you specifically seek the current list of providers for the latest version of
 
 If you seek the current list of providers for any older version of the OPTiMaDe specification, you can access it using this URL:
 
-- [https://www.optimade.org/providers/*\<version\>*/links/](https://www.optimade.org/providers/\<version\>/links/)
+- [https://www.optimade.org/providers/*\<version\>*/links/](https://www.optimade.org/providers/<version>/links/)
 
 
 ## Repository organization
