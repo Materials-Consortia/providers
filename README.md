@@ -4,20 +4,20 @@ The list of OPTiMaDe providers keeps track of all reserved database-specific pre
 
 The list of providers is published in the form of a statically hosted OPTiMaDe Index Meta-Database here:
 
-- https://www.optimade.org/providers/
+- [https://www.optimade.org/providers/](https://www.optimade.org/providers/)
 
 If you specifically seek the current list of providers for the latest version of the OPTiMaDe specification, you can access it at this URL:
 
-- https://www.optimade.org/providers/links/
+- [https://www.optimade.org/providers/links/](https://www.optimade.org/providers/links/)
 
 If you seek the current list of providers for any older version of the OPTiMaDe specification, you can access it using this URL:
 
-- https://www.optimade.org/providers/*\<version\>*/links/
+- [https://www.optimade.org/providers/*\<version\>*/links/](https://www.optimade.org/providers/*\<version\>*/links/)
 
 
 ## Repository organization
 
-The OPTiMaDe providers repository is hosted here: https://github.com/Materials-Consortia/providers
+The OPTiMaDe providers repository is hosted here: [https://github.com/Materials-Consortia/providers](https://github.com/Materials-Consortia/providers)
 
 The paths in the repository are organized this way:
 
