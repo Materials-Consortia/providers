@@ -5,9 +5,9 @@
       "id": "aiida",
       "attributes": {
         "name": "AiiDA",
-        "description": "AiiDA: Automated Interactive Infrastructure and Database for Computational Science (http://www.aiida.net)",
+        "description": "AiiDA: Automated Interactive Infrastructure and Database for Computational Science",
         "base_url": null,
-        "homepage": null
+        "homepage": "http://www.aiida.net"
       }
     },
     {
@@ -46,8 +46,8 @@
       "attributes": {
         "name": "Example provider",
         "description": "Provider used for examples, not to be assigned to a real database",
-        "base_url": "http://example.com/optimade",
-        "homepage": null
+        "base_url": "https://example.com/optimade",
+        "homepage": "https://example.com"
       }
     },
     {
@@ -65,9 +65,9 @@
       "id": "mcloud",
       "attributes": {
         "name": "Materials Cloud",
-        "description": "Materials Cloud: A platform for Open Science built for seamless sharing of resources in computational materials science (http://www.materialscloud.org)",
+        "description": "Materials Cloud: A platform for Open Science built for seamless sharing of resources in computational materials science",
         "base_url": "https://www.materialscloud.org/optimade",
-        "homepage": null
+        "homepage": "https://www.materialscloud.org"
       }
     },
     {
@@ -127,7 +127,7 @@
         "name": "OPTiMaDe implementations and libraries",
         "description": "Prefix for implementation-specific identifiers used in API implementations and libraries provided at https://github.com/Materials-Consortia",
         "base_url": null,
-        "homepage": null
+        "homepage": "https://www.optimade.org"
       }
     },
     {
