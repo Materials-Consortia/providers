@@ -5,8 +5,9 @@
       "id": "aiida",
       "attributes": {
         "name": "AiiDA",
-        "description": "AiiDA: Automated Interactive Infrastructure and Database for Computational Science (http://www.aiida.net)",
-        "base_url": null
+        "description": "AiiDA: Automated Interactive Infrastructure and Database for Computational Science",
+        "base_url": null,
+        "homepage": "http://www.aiida.net"
       }
     },
     {
@@ -15,7 +16,8 @@
       "attributes": {
         "name": "aflow.org",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -24,7 +26,8 @@
       "attributes": {
         "name": "Cambridge databases",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -33,7 +36,8 @@
       "attributes": {
         "name": "Crystallography Open Database",
         "description": "Open-access collection of crystal structures of organic, inorganic, metal-organics compounds and minerals, excluding biopolymers",
-        "base_url": "https://www.crystallography.net/cod/optimade"
+        "base_url": "https://www.crystallography.net/cod/optimade",
+        "homepage": null
       }
     },
     {
@@ -42,7 +46,8 @@
       "attributes": {
         "name": "Example provider",
         "description": "Provider used for examples, not to be assigned to a real database",
-        "base_url": "http://example.com/optimade"
+        "base_url": "https://example.com/optimade",
+        "homepage": "https://example.com"
       }
     },
     {
@@ -51,7 +56,8 @@
       "attributes": {
         "name": "The High-Throughput Toolkit",
         "description": "Prefix for implementation-specific identifiers used in the httk implementation at http://httk.org/",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -59,8 +65,9 @@
       "id": "mcloud",
       "attributes": {
         "name": "Materials Cloud",
-        "description": "Materials Cloud: A platform for Open Science built for seamless sharing of resources in computational materials science (http://www.materialscloud.org)",
-        "base_url": "https://www.materialscloud.org/optimade"
+        "description": "Materials Cloud: A platform for Open Science built for seamless sharing of resources in computational materials science",
+        "base_url": "https://www.materialscloud.org/optimade",
+        "homepage": "https://www.materialscloud.org"
       }
     },
     {
@@ -69,7 +76,8 @@
       "attributes": {
         "name": "materialsproject.org",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -78,7 +86,8 @@
       "attributes": {
         "name": "materials platform for data science",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -87,7 +96,8 @@
       "attributes": {
         "name": "nomad laboratory",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -96,7 +106,8 @@
       "attributes": {
         "name": "open database of xtals",
         "description": "",
-        "base_url": "http://odbx.science/optimade"
+        "base_url": "http://odbx.science/optimade",
+        "homepage": "http://odbx.science"
       }
     },
     {
@@ -105,7 +116,8 @@
       "attributes": {
         "name": "open materials database",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -114,7 +126,8 @@
       "attributes": {
         "name": "OPTiMaDe implementations and libraries",
         "description": "Prefix for implementation-specific identifiers used in API implementations and libraries provided at https://github.com/Materials-Consortia",
-        "base_url": null
+        "base_url": null,
+        "homepage": "https://www.optimade.org"
       }
     },
     {
@@ -123,7 +136,8 @@
       "attributes": {
         "name": "open quantum materials database",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -132,7 +146,8 @@
       "attributes": {
         "name": "Predicted Crystallography Open Database",
         "description": "",
-        "base_url": null
+        "base_url": null,
+        "homepage": null
       }
     },
     {
@@ -141,7 +156,8 @@
       "attributes": {
         "name": "Theoretical Crystallography Open Database",
         "description": "Open-access collection of theoretically calculated or refined crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers",
-        "base_url": "https://www.crystallography.net/tcod/optimade"
+        "base_url": "https://www.crystallography.net/tcod/optimade",
+        "homepage": null
       }
     }
   ]
