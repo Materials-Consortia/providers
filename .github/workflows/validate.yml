@@ -21,4 +21,4 @@ jobs:
         pip install git+https://github.com/Materials-Consortia/optimade-python-tools
     - name: Run validator
       run: |
-        optimade_validator https://www.optimade.org/providers
+        optimade_validator --index https://www.optimade.org/providers
