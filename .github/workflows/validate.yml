@@ -2,8 +2,6 @@ name: Scheduled validator
 
 on:
   push:
-  #  schedule:
-  #   - cron:  '0 0 * * *'
 
 jobs:
   validate:
@@ -19,6 +17,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install git+https://github.com/Materials-Consortia/optimade-python-tools
-    - name: Run validator
+        pip install pytest
+    - name: Run validator on repository
       run: |
-        optimade_validator --index https://www.optimade.org/providers
+        py.test
