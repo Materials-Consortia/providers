@@ -1,0 +1,3 @@
+/providers.json	/src/links/v1/providers.json	200!
+/v1/links	/src/links/v1/providers.json	200!
+/v1/info	/src/info/v1/info.json	200!
