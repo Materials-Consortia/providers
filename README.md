@@ -14,7 +14,7 @@ If you specifically seek the current list of providers for the latest version of
 
 If you seek the list of providers formatted according to a specific major version of the OPTiMaDe specification, you can access it using this URL:
 
-- [https://providers.optimade.org/*\<version\>*/links](https://providers.optimade.org/<version>/links)
+- [https://providers.optimade.org/*\<version\>*/links](https://providers.optimade.org/v1/links)
 
 Where `<version>` designates a major version name of the OPTiMaDe specification, e.g., `v1`. 
 
