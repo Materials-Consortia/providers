@@ -6,11 +6,11 @@ The list of OPTiMaDe providers keeps track of all reserved database-specific pre
 
 The list of providers is published in the form of a statically hosted OPTiMaDe Index Meta-Database here:
 
-- https://providers.optimade.org/
+- [https://providers.optimade.org/](https://providers.optimade.org/)
 
 If you specifically seek the current list of providers for the latest version of the OPTiMaDe specification, you can access it at this URL:
 
-- https://providers.optimade.org/providers.json
+- [https://providers.optimade.org/providers.json](https://providers.optimade.org/providers.json)
 
 If you seek the list of providers formatted according to a specific major version of the OPTiMaDe specification, you can access it using this URL:
 
