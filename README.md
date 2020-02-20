@@ -45,7 +45,7 @@ Hence, to update the list of providers, file a pull-request against the reposito
 
   - Make sure to update the URL in `available_api_versions` to point at your hosting location.
 
-- Edit `/src/info/v1/info.json` to point out your OPTiMaDe databases:
+- Edit `/src/info/v1/links.json` to point out your OPTiMaDe databases:
 
   - Put all your databases on the form:
     ```
@@ -85,6 +85,6 @@ Hence, to update the list of providers, file a pull-request against the reposito
     - Build commmand: `jekyll build`
     - Publish directory: `_site/`
 
-  - You are also recommended to set something sane for your subdomain in *Domain settings*, or even setup your own custom domain.
+  - You are also recommended to set your subdomain in *Domain settings*, or setup your own custom domain.
 
 - If you are a provider of OPTiMaDe databases and you have set up the index meta-database to point at them, please post a pull-request against [https://github.com/Materials-Consortia/providers](https://github.com/Materials-Consortia/providers) to add the URL for your index meta-database to the central OPTiMaDe providers list.
