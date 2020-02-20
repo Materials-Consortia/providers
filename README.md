@@ -36,3 +36,53 @@ The repository is organized this way:
 
 Presently, only the `v1` version of the formats exist.
 Hence, to update the list of providers, file a pull-request against the repository to edit `/src/links/v1/providers.json`.
+
+## Fork this repository to set up an index meta-database for your own databases
+
+- Click on the Fork button in GitHub and follow the instructions.
+- Edit `/src/info/v1/info.json` with your information:
+
+  - Make sure to update the URL in `available_api_versions` to point at your hosting location.
+
+- Edit `/src/info/v1/info.json` to point out your OPTiMaDe databases:
+
+  - Put all your databases on the form:
+    ```
+    {
+      "type": "child",
+      "id": "example_main",
+      "attributes": {
+        "name": "Example name",
+        "description": "Example database containing example entries",
+        "base_url": "https://www.example.com/optimade",
+        "homepage": "https://www.example.com"
+      }
+    }
+    ```
+
+  - Include also the following segment:
+    ```
+    {
+      "type": "parent",
+      "id": "optimade_index",
+      "attributes": {
+        "name": "OPTiMaDe providers",
+	"description": "OPTiMaDe index meta-database of known providers",
+        "base_url": "https://providers.optimade.org",
+        "homepage": "https://www.optimade.org"
+      }
+    }
+    ```
+
+- Edit `README.md` to say who you are and what databases you index.
+- Configure your hosting provider to use your forked repository.
+  The repository presently contains configuration files for Netlify, which you can set up as follows:
+
+  - Deploy using the *Netlify Continuous Deployment: GitHub* option, and give it access to your forked repository with the following settings:
+  
+    - Build commmand: `jekyll build`
+    - Publish directory: `_site/`
+
+  - You are also recommended to set something sane for your subdomain in *Domain settings*, or even setup your own custom domain.
+
+- If you are a provider of OPTiMaDe databases and you have set up the index meta-database to point at them, feel free to post a pull-request against [https://github.com/Materials-Consortia/providers](https://github.com/Materials-Consortia/providers) to add the URL for your index meta-database to the OPTiMaDe central list of providers.
