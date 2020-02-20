@@ -68,14 +68,14 @@ Hence, to update the list of providers, file a pull-request against the reposito
       "id": "optimade_index",
       "attributes": {
         "name": "OPTiMaDe providers",
-	"description": "OPTiMaDe index meta-database of known providers",
+        "description": "OPTiMaDe index meta-database of known providers",
         "base_url": "https://providers.optimade.org",
         "homepage": "https://www.optimade.org"
       }
     }
     ```
 
-- Edit `README.md` to say who you are and what databases you index.
+- Edit `README.md` to say who you are and what databases you provide.
 
 - Configure your hosting provider to use your forked repository.
   The repository presently contains configuration files for Netlify, which you can set up as follows:
