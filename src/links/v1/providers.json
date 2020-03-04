@@ -105,9 +105,9 @@
       "id": "odbx",
       "attributes": {
         "name": "open database of xtals",
-        "description": "",
-        "base_url": "http://odbx.science/optimade",
-        "homepage": "http://odbx.science"
+        "description": "A public database of crystal structures mostly derived from ab initio structure prediction from the group of Dr Andrew Morris at the University of Birmingham https://ajm143.github.io",
+        "base_url": "https://odbx.science/optimade",
+        "homepage": "https://odbx.science"
       }
     },
     {
