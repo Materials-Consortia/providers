@@ -22,16 +22,6 @@
     },
     {
       "type": "provider",
-      "id": "cam",
-      "attributes": {
-        "name": "Cambridge databases",
-        "description": "",
-        "base_url": null,
-        "homepage": null
-      }
-    },
-    {
-      "type": "provider",
       "id": "cod",
       "attributes": {
         "name": "Crystallography Open Database",
