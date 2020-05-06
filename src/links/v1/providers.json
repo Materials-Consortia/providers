@@ -65,9 +65,9 @@
       "id": "mp",
       "attributes": {
         "name": "materialsproject.org",
-        "description": "",
-        "base_url": null,
-        "homepage": null
+        "description":  "The Materials Project: A database of computed materials properties for the discovery and design of novel materials.",
+        "base_url": "https://optimade.materialsproject.org",
+        "homepage": "https://www.materialsproject.org"
       }
     },
     {
