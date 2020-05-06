@@ -5,7 +5,7 @@
       "id": "aiida",
       "attributes": {
         "name": "AiiDA",
-        "description": "AiiDA: Automated Interactive Infrastructure and Database for Computational Science",
+        "description": "Automated Interactive Infrastructure and Database for Computational Science (AiiDA)",
         "base_url": null,
         "homepage": "http://www.aiida.net"
       }
@@ -55,7 +55,7 @@
       "id": "mcloud",
       "attributes": {
         "name": "Materials Cloud",
-        "description": "Materials Cloud: A platform for Open Science built for seamless sharing of resources in computational materials science",
+        "description": "A platform for Open Science built for seamless sharing of resources in computational materials science",
         "base_url": "https://www.materialscloud.org/optimade",
         "homepage": "https://www.materialscloud.org"
       }
