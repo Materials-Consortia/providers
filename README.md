@@ -2,21 +2,20 @@
 
 # OPTIMADE Providers Index Meta-Database
 
-The list of OPTIMADE providers keeps track of all reserved database-specific prefixes and the URLs to the index databases of all OPTIMADE database providers that participate in the [OPTIMADE network](https://www.optimade.org/).
+The list of providers is published as an [OPTIMADE](https://www.optimade.org/) Index Meta-Database here: [https://providers.optimade.org/](https://providers.optimade.org/)
 
-The list of providers is published in the form of a statically hosted OPTIMADE Index Meta-Database here:
+You can obtain the list of providers in a machine-readable format following the [OPTIMADE specification for Index Meta-Databases](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst#32index-meta-database) by using the following URL:
 
-- [https://providers.optimade.org/](https://providers.optimade.org/)
+- [https://providers.optimade.org/v1/links](https://providers.optimade.org/v1/links)
 
-If you specifically seek the current list of providers for the latest version of the OPTIMADE specification, you can access it at this URL:
+where `v1` is currently the latest version and can be replaced with any major version name of the OPTIMADE specification.
+
+For convenience, you can also access the most recent list of providers for the latest version of the OPTIMADE specification directly at this URL:
 
 - [https://providers.optimade.org/providers.json](https://providers.optimade.org/providers.json)
 
-If you seek the list of providers formatted according to a specific major version of the OPTIMADE specification, you can access it using this URL:
+You can contribute a new provider or amend the current information by creating a pull request to [the `providers` repository](https://github.com/Materials-Consortia/providers).
 
-- [https://providers.optimade.org/*\<version\>*/links](https://providers.optimade.org/v1/links)
-
-Where `<version>` designates a major version name of the OPTIMADE specification, e.g., `v1`. 
 
 ## Repository organization
 
