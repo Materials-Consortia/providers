@@ -84,10 +84,10 @@
       "type": "provider",
       "id": "nmd",
       "attributes": {
-        "name": "nomad laboratory",
-        "description": "",
-        "base_url": null,
-        "homepage": null
+        "name": "novel materials discovery (NOMAD)",
+        "description": "A FAIR data sharing platform for materials science data",
+        "base_url": "https://repository.nomad-coe.eu/v0.8/optimade",
+        "homepage": "https://repository.nomad-coe.eu/v0.8"
       }
     },
     {
