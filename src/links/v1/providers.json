@@ -86,7 +86,7 @@
       "attributes": {
         "name": "novel materials discovery (NOMAD)",
         "description": "A FAIR data sharing platform for materials science data",
-        "base_url": "https://repository.nomad-coe.eu/v0.8/optimade",
+        "base_url": "https://repository.nomad-coe.eu/v0.8/optimade/index",
         "homepage": "https://repository.nomad-coe.eu/v0.8"
       }
     },
