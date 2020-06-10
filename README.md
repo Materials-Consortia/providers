@@ -10,7 +10,7 @@ You can obtain the list of providers in a machine-readable format following the 
 
 where `v1` is currently the latest version and can be replaced with any major version name of the OPTIMADE specification.
 
-For convenience, you can also access the most recent list of providers for the latest version of the OPTIMADE specification directly at this URL:
+For convenience, you can also access the most recent list of providers in the format mandated by the latest version of the OPTIMADE specification directly at this URL:
 
 - [https://providers.optimade.org/providers.json](https://providers.optimade.org/providers.json)
 
