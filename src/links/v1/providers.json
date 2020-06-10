@@ -132,6 +132,16 @@
     },
     {
       "type": "provider",
+      "id": "jarvis",
+      "attributes": {
+        "name": "Joint Automated Repository for Various Integrated Simulations (JARVIS)",
+        "description": "JARVIS is a repository designed to automate materials discovery using classical force-field, density functional theory, machine learning calculations and experiments.",
+        "base_url": null,
+        "homepage": "https://jarvis.nist.gov"
+      }
+    },
+    {
+      "type": "provider",
       "id": "pcod",
       "attributes": {
         "name": "Predicted Crystallography Open Database",
