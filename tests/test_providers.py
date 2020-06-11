@@ -101,11 +101,14 @@ class ProvidersValidator(unittest.TestCase):
                 json_rep = json.load(f)
             response = LinksResponse(**json_rep)
             for entry in response.data:
-                if entry.attributes.base_url is not None:
+                entry_id = entry["id"]
+                if entry.get('attributes', {}).get('base_url') is not None:
                     # the provider has a non-null base_url
+                    print(f'[INFO] Checking provider "{entry_id}" ({version})')
+
 
                     # I check the /info endpoint
-                    info_endpoint = f'{entry.attributes.base_url}/{version}/info'
+                    info_endpoint = f'{entry["attributes"]["base_url"]}/{version}/info'
                     tested_info_endpoints = [info_endpoint]                    
                     try:
                         try:
@@ -114,39 +117,42 @@ class ProvidersValidator(unittest.TestCase):
                             if apply_v0_workarounds and version == 'v1' and exc.code == 404:
                                 try:
                                     # Temporary workaround for optimade-python-tools while v1 is released
-                                    info_endpoint = f'{entry.attributes.base_url}/v0.10/info'
+                                    info_endpoint = f'{entry["attributes"]["base_url"]}/v0.10/info'
                                     tested_info_endpoints.append(info_endpoint)
                                     response_content = query_optimade(info_endpoint)
                                 except urllib.error.HTTPError as exc:
                                     # Temporary workaround for nomad that uses v0 as a prefix
-                                    info_endpoint = f'{entry.attributes.base_url}/v0/info'
+                                    info_endpoint = f'{entry["attributes"]["base_url"]}/v0/info'
                                     tested_info_endpoints.append(info_endpoint)
                                     response_content = query_optimade(info_endpoint)                              
                             else:
                                 raise
                     except urllib.error.HTTPError as exc:
                         fallback_string = "" if len(tested_info_endpoints) == 1 else f" (I tried all these URLs: {tested_info_endpoints})"
-                        problems.append(f'[ERROR] Provider "{entry.id}" {info_endpoint} endpoint is not reachable{fallback_string}. Error: {str(exc)}')
+                        problems.append(f'Provider "{entry_id}" {info_endpoint} endpoint is not reachable{fallback_string}. Error: {str(exc)}')
                         continue
 
                     try:
                         info_response = InfoResponse(**json.loads(response_content))
                     except Exception as exc:
-                        problems.append(f'[ERROR] Provider "{entry.id}": {info_endpoint} endpoint has problems during validation. Error:\n{str(exc)}')
+                        problems.append(f'Provider "{entry_id}": {info_endpoint} endpoint has problems during validation.\nError message:\n{str(exc)}')
                         continue
 
                     # If unspecified, it should be assumed as False, according to the OPTIMADE specs
                     is_index = info_response.data.attributes.dict().get('is_index', False)
                     if not is_index:
-                        print(f"[ERROR]  > PROBLEM DETECTED with provider '{entry.id}'.")
+                        print(f"  > PROBLEM DETECTED with provider '{entry_id}'.")
                         print(response_content)
-                        problems.append(f'[ERROR] Provider "{entry.id}" is NOT providing an index meta-database at {info_endpoint}')
+                        problems.append(f'Provider "{entry_id}" is NOT providing an index meta-database at {info_endpoint}')
                         continue
                 
-                    print(f'[INFO] Provider "{entry.id}" ({version}) validated correctly ({info_endpoint})')
+                    print(f'[INFO] Provider "{entry_id}" ({version}) validated correctly ({info_endpoint})')
                                 
         # I am collecting all problems and printing at the end because in this way we get a full overview
         # of the 
         if problems:
-            print("[ERROR] PROBLEMS DETECTED!\n\n" + "\n".join(problems))
-            raise AssertionError("[ERROR] PROBLEMS DETECTED!\n\n" + "\n".join(problems))
+            err_msg = "PROBLEMS DETECTED!\n\n" + "\n\n".join(problems)
+            # Prepend with [ERROR] so that it gets colored in the GitHub output
+            err_msg = "\n".join(f"[ERROR] {line}" for line in err_msg.splitlines())
+            print(err_msg)
+            raise AssertionError(err_msg)
