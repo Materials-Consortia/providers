@@ -17,8 +17,8 @@
          "attributes" : {
             "name": "OPTIMADE Providers Index Meta-Database",
             "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
-            "base_url": "https://providers.optimade.org/",
-            "homepage": "https://www.optimade.org/",
+            "base_url": "https://providers.optimade.org",
+            "homepage": "https://www.optimade.org",
             "link_type": "providers"
          }
       }
