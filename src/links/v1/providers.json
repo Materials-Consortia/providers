@@ -5,7 +5,7 @@
       "id": "aiida",
       "attributes": {
         "name": "AiiDA",
-        "description": "AiiDA: Automated Interactive Infrastructure and Database for Computational Science",
+        "description": "Automated Interactive Infrastructure and Database for Computational Science (AiiDA)",
         "base_url": null,
         "homepage": "http://www.aiida.net"
       }
@@ -15,16 +15,6 @@
       "id": "aflow",
       "attributes": {
         "name": "aflow.org",
-        "description": "",
-        "base_url": null,
-        "homepage": null
-      }
-    },
-    {
-      "type": "provider",
-      "id": "cam",
-      "attributes": {
-        "name": "Cambridge databases",
         "description": "",
         "base_url": null,
         "homepage": null
@@ -65,7 +55,7 @@
       "id": "mcloud",
       "attributes": {
         "name": "Materials Cloud",
-        "description": "Materials Cloud: A platform for Open Science built for seamless sharing of resources in computational materials science",
+        "description": "A platform for Open Science built for seamless sharing of resources in computational materials science",
         "base_url": "https://www.materialscloud.org/optimade",
         "homepage": "https://www.materialscloud.org"
       }
@@ -94,10 +84,10 @@
       "type": "provider",
       "id": "nmd",
       "attributes": {
-        "name": "nomad laboratory",
-        "description": "",
-        "base_url": null,
-        "homepage": null
+        "name": "novel materials discovery (NOMAD)",
+        "description": "A FAIR data sharing platform for materials science data",
+        "base_url": "https://repository.nomad-coe.eu/v0.8/optimade/index",
+        "homepage": "https://repository.nomad-coe.eu/v0.8"
       }
     },
     {
@@ -105,9 +95,9 @@
       "id": "odbx",
       "attributes": {
         "name": "open database of xtals",
-        "description": "",
-        "base_url": "http://odbx.science/optimade",
-        "homepage": "http://odbx.science"
+        "description": "A public database of crystal structures mostly derived from ab initio structure prediction from the group of Dr Andrew Morris at the University of Birmingham https://ajm143.github.io",
+        "base_url": "https://optimade-index.odbx.science",
+        "homepage": "https://odbx.science"
       }
     },
     {
@@ -138,6 +128,16 @@
         "description": "",
         "base_url": null,
         "homepage": null
+      }
+    },
+    {
+      "type": "provider",
+      "id": "jarvis",
+      "attributes": {
+        "name": "Joint Automated Repository for Various Integrated Simulations (JARVIS)",
+        "description": "JARVIS is a repository designed to automate materials discovery using classical force-field, density functional theory, machine learning calculations and experiments.",
+        "base_url": null,
+        "homepage": "https://jarvis.nist.gov"
       }
     },
     {
