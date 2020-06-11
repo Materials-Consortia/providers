@@ -7,7 +7,8 @@
         "name": "AiiDA",
         "description": "Automated Interactive Infrastructure and Database for Computational Science (AiiDA)",
         "base_url": null,
-        "homepage": "http://www.aiida.net"
+        "homepage": "http://www.aiida.net",
+        "link_type": "external"
       }
     },
     {
