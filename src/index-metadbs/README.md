@@ -2,7 +2,7 @@
 
 ## Goal
 
-This folder hosts static versions of Index Meta-Databases for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain an Index Meta-Database themselves (Index Meta-Databases are described in the [OPTIMADE specifications](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst)).
+This folder hosts static versions of Index Meta-Databases for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst#32index-meta-database) themselves.
 
 Note: while providing an Index Meta-Database is not required by the OPTIMADE API specification, it is instead required in order to be listed in this List of Providers ([providers.optimade.org](http://providers.optimade.org)).
 
