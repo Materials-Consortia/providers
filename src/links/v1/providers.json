@@ -36,7 +36,7 @@
       "attributes": {
         "name": "Example provider",
         "description": "Provider used for examples, not to be assigned to a real database",
-        "base_url": null,
+        "base_url": "http://providers.optimade.org/index-metadbs/exmpl",
         "homepage": "https://example.com"
       }
     },

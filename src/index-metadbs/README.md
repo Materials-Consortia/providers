@@ -16,20 +16,20 @@ Rare changes are instead of course welcome, e.g., if you have to change your DNS
 Note that "changes" here refer solely to changes to the *list of sub-databases*; the content of each sub-database can change at any time without the need to modify the Index Meta-Database.
 
 ## Instructions on how to add a new static Index Meta-Database
-1. Go in the folder `src/index-metadbs`, copy one of the existing folders (e.g. `cod`) to a new folder, where the folder name should be the identifier of your provider (we will use `exmpl` here and in the following).
+1. Go in the folder `src/index-metadbs`, copy the existing template folder (`exmpl`) to a new folder, where the folder name should be the identifier of your provider (we will use `exmpl2` here and in the following as the name of the new provider).
    In particular, this will contain a `v1` subfolder, with two files inside it: `info.json` and `links.json`.
 
 2. Adapt the content of the `links.json` file. In particular, provide a new `link` dictionary entry for each sub-database that you want to refer to. 
    In the special case in which you have a single "main" sub-database, just change the existing values as follows:
-    
-   - change the `id` to your provider identifier: `"cod" -> "exmpl"`
+
+   - change the `id` to your provider identifier: `"exmpl" -> "exmpl2"`
    - change the attributes `name`, `description` and `homepage` to contain the correct content. Please reuse the *same* content as the one you specified in the main `providers.json` file.
    - point the `base_url` to the base URL of your OPTIMADE implementation.
 
 3. Adapt the content of the `info.json` file. In particular, you should change two fields:
 
-   - change the URL of the `available_api_versions` by replacing `cod` with your identifier: `http://providers.optimade.org/index-metadbs/exmpl/v1/`
-   - change the `id` inside `data->relationships->default->data->id` to the correct ID from the list of links in the `links.json` file.
+   - change the URL of the `available_api_versions` by replacing `exmpl` with your identifier: `http://providers.optimade.org/index-metadbs/exmpl2/v1/`
+   - change the `id` inside `data->relationships->default->data->id` from `exmpl` to the correct ID from the list of links in the `links.json` file.
      As explained in the OPTIMADE specifications, this should be the ID of the database that should be considered as the "default" sub-database by clients. 
      
      If you only have one sub-database and you followed the instructions above, you should use here your provider identifier.

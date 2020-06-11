@@ -1,0 +1,15 @@
+{
+   "data" : [
+      {
+         "id" : "exmpl",
+         "type" : "link",
+         "attributes" : {
+            "name": "Example provider",
+            "description": "Provider used for examples, not to be assigned to a real database",
+            "base_url": null,
+            "homepage": "https://example.com",
+            "link_type": "child"
+         }
+      }
+   ]
+}
