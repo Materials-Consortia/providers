@@ -11,6 +11,8 @@ from optimade.models import InfoResponse, LinksResponse
 
 TOP_DIR = pathlib.Path(__file__).parent.parent
 
+apply_v0_workarounds = True # To be disabled if/when we do not wish to allow to point to v0 endpoints
+
 def query_optimade(url):
     """Perform a URL request to the given URL endpoint.
 
@@ -109,7 +111,7 @@ class ProvidersValidator(unittest.TestCase):
                         try:
                             response_content = query_optimade(info_endpoint)
                         except urllib.error.HTTPError as exc:
-                            if version == 'v1' and exc.code == 404:
+                            if apply_v0_workarounds and version == 'v1' and exc.code == 404:
                                 try:
                                     # Temporary workaround for optimade-python-tools while v1 is released
                                     info_endpoint = f'{entry.attributes.base_url}/v0.10/info'
@@ -124,21 +126,21 @@ class ProvidersValidator(unittest.TestCase):
                                 raise
                     except urllib.error.HTTPError as exc:
                         fallback_string = "" if len(tested_info_endpoints) == 1 else f" (I tried all these URLs: {tested_info_endpoints})"
-                        problems.append(f'*** Provider "{entry.id}" {info_endpoint} endpoint is not reachable{fallback_string}. Error: {str(exc)}')
+                        problems.append(f'[ERROR] Provider "{entry.id}" {info_endpoint} endpoint is not reachable{fallback_string}. Error: {str(exc)}')
                         continue
 
                     try:
                         info_response = InfoResponse(**json.loads(response_content))
                     except Exception as exc:
-                        problems.append(f'*** Provider "{entry.id}": {info_endpoint} endpoint has problems during validation. Error:\n{str(exc)}')
+                        problems.append(f'[ERROR] Provider "{entry.id}": {info_endpoint} endpoint has problems during validation. Error:\n{str(exc)}')
                         continue
 
                     # If unspecified, it should be assumed as False, according to the OPTIMADE specs
                     is_index = info_response.data.attributes.dict().get('is_index', False)
                     if not is_index:
-                        print(f"  > PROBLEM DETECTED with provider '{entry.id}'.")
+                        print(f"[ERROR]  > PROBLEM DETECTED with provider '{entry.id}'.")
                         print(response_content)
-                        problems.append(f'*** Provider "{entry.id}" is NOT providing an index meta-database at {info_endpoint}')
+                        problems.append(f'[ERROR] Provider "{entry.id}" is NOT providing an index meta-database at {info_endpoint}')
                         continue
                 
                     print(f'[INFO] Provider "{entry.id}" ({version}) validated correctly ({info_endpoint})')
@@ -146,5 +148,5 @@ class ProvidersValidator(unittest.TestCase):
         # I am collecting all problems and printing at the end because in this way we get a full overview
         # of the 
         if problems:
-            print("PROBLEMS DETECTED!\n\n" + "\n".join(problems))
-            raise AssertionError("PROBLEMS DETECTED!\n\n" + "\n".join(problems))
+            print("[ERROR] PROBLEMS DETECTED!\n\n" + "\n".join(problems))
+            raise AssertionError("[ERROR] PROBLEMS DETECTED!\n\n" + "\n".join(problems))
