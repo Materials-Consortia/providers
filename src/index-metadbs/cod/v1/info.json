@@ -25,7 +25,7 @@
          "default" : {
             "data" : {
                "id" : "cod",
-               "type" : "link"
+               "type" : "links"
             }
          }
       },

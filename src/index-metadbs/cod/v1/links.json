@@ -2,7 +2,7 @@
    "data" : [
       {
          "id" : "cod",
-         "type" : "link",
+         "type" : "links",
          "attributes" : {
             "name": "Crystallography Open Database",
             "description": "Open-access collection of crystal structures of organic, inorganic, metal-organics compounds and minerals, excluding biopolymers",
@@ -13,7 +13,7 @@
       },
       {
          "id" : "optimade-providers",
-         "type" : "link",
+         "type" : "links",
          "attributes" : {
             "name": "OPTIMADE Providers Index Meta-Database",
             "description": "The list of OPTIMADE providers maintained by Materials-Consortia",

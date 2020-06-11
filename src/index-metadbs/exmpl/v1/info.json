@@ -25,7 +25,7 @@
          "default" : {
             "data" : {
                "id" : "exmpl",
-               "type" : "link"
+               "type" : "links"
             }
          }
       },
