@@ -2,9 +2,9 @@
 
 ## Goal
 
-This folder hosts static versions of Index Meta-Databases for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain an Index Meta-Database themselves (Index Meta-Databases are described in the OPTIMADE specifications).
+This folder hosts static versions of Index Meta-Databases for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain an Index Meta-Database themselves (Index Meta-Databases are described in the [OPTIMADE specifications](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst)).
 
-Note: while providing an (empty) Index Meta-Database is not required by the OPTIMADE API specifications, it is instead required in order to be listed in this List of Providers (http://providers.optimade.org).
+Note: while providing an (empty) Index Meta-Database is not required by the OPTIMADE API specifications, it is instead required in order to be listed in this List of Providers ([providers.optimade.org](http://providers.optimade.org)).
 
 ## When should I use a static index meta-database hosted in this repository
 
@@ -16,7 +16,7 @@ Rare changes are instead of course welcome, e.g., if you have to change your DNS
 Note that "changes" here refer solely to changes to the *list of sub-databases*; the content of each sub-database can change at any time without the need to modify the Index Meta-Database.
 
 ## Instructions on how to add a new static Index Meta-Database
-1. Go in the folder `src/static-index-metadbs`, copy one of the existing folders (e.g. `cod`) to a new folder, where the folder name should be the identifier of your provider (we will use `exmpl` here and in the following).
+1. Go in the folder `src/index-metadbs`, copy one of the existing folders (e.g. `cod`) to a new folder, where the folder name should be the identifier of your provider (we will use `exmpl` here and in the following).
    In particular, this will contain a `v1` subfolder, with two files inside it: `info.json` and `links.json`.
 
 2. Adapt the content of the `links.json` file. In particular, provide a new `link` dictionary entry for each sub-database that you want to refer to. 
@@ -35,16 +35,7 @@ Note that "changes" here refer solely to changes to the *list of sub-databases*;
      If you only have one sub-database and you followed the instructions above, you should use here your provider identifier.
      If you do not wish to have a default database, remove completely the `relationships` attribute.
 
-4. Go to the top-level folder of this repository, and then to the subfolder `index-metadbs`. Create a subfolder `exmpl` (replace with your provider identifier), and a subfolder `exmpl/v1`.
+4. In the top-level `providers.json` file, point the `base_url` of your provider to `http://providers.optimade.org/index-metadbs/exmpl/`.
 
-5. Inside the `exmpl/v1` folder, create two symbolic links pointing to the `info.json` and `links.json` files you created earlier, **but with a `.html` extension**.
-   You can simply use the following two commands (replace as usual `exmpl` with your provider ID):
-
-   ```bash
-   ln -s ../../../src/static-index-metadbs/exmpl/v1/info.json info.html
-   ln -s ../../../src/static-index-metadbs/exmpl/v1/links.json links.html
-   ```
-
-6. In the top-level `providers.json` file, point the `base_url` of your provider to `http://providers.optimade.org/index-metadbs/exmpl/`.
-
-7. Create a pull request, and check that all automated continuous-integration tests pass.
+5. Create a pull request, and check that all automated continuous-integration tests pass.
+   Also, you can check that the new Index Meta-Database properly works at the expected link using the Netlify preview (just click on the `netlify/optimade-providers/deploy-preview` entry of the GitHub checks that will appear in the GitHub PR Conversation page after a few seconds).

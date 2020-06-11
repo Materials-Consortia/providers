@@ -38,6 +38,6 @@ Hence, to update the list of providers, file a pull-request against the reposito
 
 ## Requirements to be listed in this providers list
 
-It is a policy of this providers list (http://providers.optimade.org) that links inside `providers.json` must be links to an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst#32index-meta-database).
+It is a policy of this providers list ([providers.optimade.org](http://providers.optimade.org)) that links inside `providers.json` must be links to an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst#32index-meta-database).
 
-If you only have one or few databases in your implementation, and you do not want to host an Index Meta-Database yourself, you can host the Index Meta-Database in this repository. You can find instructions [here](./src/static-index-metadbs).
+If you only have one or few databases in your implementation, and you do not want to host an Index Meta-Database yourself, you can host the Index Meta-Database directly in this repository. You can find instructions [here](./src/index-metadbs).
