@@ -42,10 +42,10 @@ def query_optimade(url):
         path = parsed_url.path[1:] if parsed_url.path.startswith('/') else parsed_url.path
         # Remove any pending slashes
         path =  path[:-1] if path.endswith('/') else path
-        # Append the .html extension
-        path += ".html"
+        # Append the .json extension
+        path += ".json"
         # Create the abs path to the file
-        file_path = TOP_DIR / path
+        file_path = TOP_DIR / 'src' / path
         try:
             with open(file_path) as fhandle:
                 response_content = fhandle.read()
@@ -100,9 +100,7 @@ class ProvidersValidator(unittest.TestCase):
             response = LinksResponse(**json_rep)
             for entry in response.data:
                 if entry.attributes.base_url is not None:
-                    # the provider has with a base_url
-                    print('Provider:', entry.id)
-                    print('  - base_url:', entry.attributes.base_url)
+                    # the provider has a non-null base_url
 
                     # I check the /info endpoint
                     info_endpoint = f'{entry.attributes.base_url}/{version}/info'
@@ -126,25 +124,27 @@ class ProvidersValidator(unittest.TestCase):
                                 raise
                     except urllib.error.HTTPError as exc:
                         fallback_string = "" if len(tested_info_endpoints) == 1 else f" (I tried all these URLs: {tested_info_endpoints})"
-                        problems.append(f'Provider "{entry.id}" {info_endpoint} endpoint is not reachable{fallback_string}. Error: {str(exc)}')
-                        print("  > PROBLEM DETECTED with this provider (while fetching the /info endpoint).")
+                        problems.append(f'*** Provider "{entry.id}" {info_endpoint} endpoint is not reachable{fallback_string}. Error: {str(exc)}')
                         continue
 
                     try:
                         info_response = InfoResponse(**json.loads(response_content))
                     except Exception as exc:
-                        print("  > PROBLEM DETECTED with this provider (during validation of the /info endpoint).")
-                        problems.append(f'Provider "{entry.id}" {info_endpoint} endpoint has problems during validation. Error: {str(exc)}')
+                        problems.append(f'*** Provider "{entry.id}": {info_endpoint} endpoint has problems during validation. Error:\n{str(exc)}')
                         continue
 
                     # If unspecified, it should be assumed as False, according to the OPTIMADE specs
                     is_index = info_response.data.attributes.dict().get('is_index', False)
                     if not is_index:
-                        print("  > PROBLEM DETECTED with this provider.")
+                        print(f"  > PROBLEM DETECTED with provider '{entry.id}'.")
                         print(response_content)
-                        problems.append(f'Provider "{entry.id}" is NOT providing an index meta-database at {info_endpoint}')
+                        problems.append(f'*** Provider "{entry.id}" is NOT providing an index meta-database at {info_endpoint}')
+                        continue
+                
+                    print(f'[INFO] Provider "{entry.id}" ({version}) validated correctly ({info_endpoint})')
                                 
         # I am collecting all problems and printing at the end because in this way we get a full overview
         # of the 
         if problems:
+            print("PROBLEMS DETECTED!\n\n" + "\n".join(problems))
             raise AssertionError("PROBLEMS DETECTED!\n\n" + "\n".join(problems))

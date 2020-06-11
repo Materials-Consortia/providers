@@ -26,7 +26,7 @@
       "attributes": {
         "name": "Crystallography Open Database",
         "description": "Open-access collection of crystal structures of organic, inorganic, metal-organics compounds and minerals, excluding biopolymers",
-        "base_url": "http://providers.optimade.org/index-metadbs/cod/",
+        "base_url": "http://providers.optimade.org/index-metadbs/cod",
         "homepage": "https://www.crystallography.net/cod"
       }
     },
@@ -156,7 +156,7 @@
       "attributes": {
         "name": "Theoretical Crystallography Open Database",
         "description": "Open-access collection of theoretically calculated or refined crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers",
-        "base_url": "http://providers.optimade.org/index-metadbs/tcod/",
+        "base_url": "http://providers.optimade.org/index-metadbs/tcod",
         "homepage": "https://www.crystallography.net/tcod"
       }
     }
