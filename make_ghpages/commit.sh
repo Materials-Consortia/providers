@@ -11,7 +11,7 @@ if [ "$GITHUB_ACTIONS" != "true" ]; then
 fi
 
 # move html to temp dir
-mv out ../page-build
+mv make_ghpages/out ../page-build
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 rm -rf * || exit 0
 cp -r ../page-build/* .

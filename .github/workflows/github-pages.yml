@@ -6,7 +6,7 @@ on:
   # run every day at 21:00 UTC
   - cron: "0 21 * * *"
   push:
-
+ 
 jobs:
   daily_build:
     runs-on: ubuntu-latest
@@ -22,13 +22,14 @@ jobs:
     - name: Install OPTiMaDe
       run: |
         python -m pip install --upgrade pip
-        pip install optimade
+        pip install -r make_ghpages/requirements.txt
     - name: make pages
       run: cd make_ghpages && python make_pages.py
     - name: commit to gh-pages
-      run: .github/commit.sh
+      run: ./make_ghpages/commit.sh
     - name: push changes
       uses: ad-m/github-push-action@v0.5.0
       with:
         branch: gh-pages
+        force: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
