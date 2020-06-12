@@ -27,10 +27,12 @@ The repository is organized this way:
 
 - `/src/info/<version>/info.json` is the proper response to the info endpoint formatted according to OPTIMADE version `<version>` and any later version that uses a format that is backward compatible with this version.
 
-- `/src/index-metadbs/<provider_name>/<version>/info.json` and `/src/index-metadbs/<provider_name>/<version>/links.json` are static Index Meta-Databases that are hosted in this repository for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain one on their own. See more details and instructions in `/src/index-metadbs/README.md`.
+- `/src/index-metadbs/<provider_name>/<version>/info.json` and `/src/index-metadbs/<provider_name>/<version>/links.json` are static Index Meta-Databases that are hosted in this repository for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain one on their own.
+  See more details and instructions in `/src/index-metadbs/README.md`.
 
 - `/_redirect` specifies http rewrites to map index meta-database URLs `/<version>/info` and `/<version>/links` to the corresponding files under `src/`, as well as `/providers.json`.
-  It also creates `/index-metadbs/<provider_name>/<version>/info.json` and `/index-metadbs/<provider_name>/<version>/links.json` URLs to point to the corresponding files in the `/src/index-metadbs` subfolders. This is used by the deploy tool Netlify.
+  It also creates `/index-metadbs/<provider_name>/<version>/info.json` and `/index-metadbs/<provider_name>/<version>/links.json` URLs to point to the corresponding files in the `/src/index-metadbs` subfolders.
+  This is used by the deploy tool Netlify.
 
 Presently, only the `v1` version of the formats exist.
 Hence, to update the list of providers, file a pull-request against the repository to edit `/src/links/v1/providers.json`.

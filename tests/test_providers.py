@@ -7,7 +7,7 @@ import unittest
 import urllib.request
 import urllib.parse
 
-from optimade.models import InfoResponse, LinksResponse
+from optimade.models import IndexInfoResponse, LinksResponse
 
 TOP_DIR = pathlib.Path(__file__).parent.parent
 
@@ -74,7 +74,7 @@ class ProvidersValidator(unittest.TestCase):
             path = pathlib.Path(f"/{TOP_DIR}/src/info/{version}/info.json").resolve()
             with open(path, 'r') as f:
                 json_rep = json.load(f)
-            InfoResponse(**json_rep)
+            IndexInfoResponse(**json_rep)
 
 
     def test_providers(self):
@@ -133,7 +133,7 @@ class ProvidersValidator(unittest.TestCase):
                         continue
 
                     try:
-                        info_response = InfoResponse(**json.loads(response_content))
+                        info_response = IndexInfoResponse(**json.loads(response_content))
                     except Exception as exc:
                         problems.append(f'Provider "{entry_id}": {info_endpoint} endpoint has problems during validation.\nError message:\n{str(exc)}')
                         continue
