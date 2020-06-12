@@ -69,7 +69,7 @@
         <ul>
         {% for subdb in index_metadb.subdbs %}
         <li>
-            <p><strong><a href="{{subdb.attributes.base_url}}" target="_blank">{{subdb.attributes.name}}</strong></a>
+            <p><strong><a href="{{subdb.attributes.base_url | extract_url }}" target="_blank">{{subdb.attributes.name}}</strong></a>
         (<code>{{subdb.id}}{% if index_metadb.default_subdb == subdb.id %}, default sub-database{% endif %}</code>)
         </p>
         <div>{{subdb.attributes.description}}</div>

@@ -23,6 +23,16 @@ pwd = os.path.split(os.path.abspath(__file__))[0]
 STATIC_FOLDER_ABS = os.path.join(pwd, STATIC_FOLDER)
 
 
+def extract_url(value):
+    """To be used in the URLs of the sub databases.
+    
+    Indeed, sometimes its a AnyUrl, sometimes a Link(AnyUrl)
+    """
+    try:
+        return value.href
+    except AttributeError:
+        return value
+
 def get_index_metadb_data(base_url):
     """Return some info after inspecting the base_url of this index_metadb."""
     versions_to_test = ['v1', 'v0.10', 'v0']
@@ -134,6 +144,8 @@ def make_pages():
         loader=PackageLoader('mod'),
         autoescape=select_autoescape(['html', 'xml']),
     )
+
+    env.filters['extract_url'] = extract_url
 
     with open(PROVIDERS_FILE) as f:
         providers = json.load(f)['data']
