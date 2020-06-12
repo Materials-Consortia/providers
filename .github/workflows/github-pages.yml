@@ -5,7 +5,6 @@ on:
   # See https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#scheduled-events-schedule
   # run every day at 21:00 UTC
   - cron: "0 21 * * *"
-  push:
  
 jobs:
   daily_build:
