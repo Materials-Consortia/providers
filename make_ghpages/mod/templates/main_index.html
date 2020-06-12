@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="static/favicon.png">
+{% endblock css %}
+
+{% block body %}
+<main>
+    <div class='globalsummary-box'>
+        <div style="display: table;">
+            <span class="badge" style="display: table-row; line-height: 2;">
+                <span style="display: table-cell; float: none; text-align: right;"><span class="badge-left blue tooltip" style="float: none; display: inline; text-align: right; border: none">Known providers<span class="tooltiptext">Number of known providers</span></span></span>
+                <span style="display: table-cell; float: none; text-align: left;"><span class="badge-right" style="float: none; display: inline; text-align: left; border: none">{{ providers | length }} providers</span></span>
+            </span>
+
+            <span class="badge" style="display: table-row; line-height: 2;">
+                <span style="display: table-cell; float: none; text-align: right;"><span class="badge-left green tooltip" style="float: none; display: inline; text-align: right; border: none">Available providers<span class="tooltiptext">Providers that specify an OPTIMADE base URL</span></span></span>
+                <span style="display: table-cell; float: none; text-align: left;"><span class="badge-right" style="float: none; display: inline; text-align: left; border: none">{{ globalsummary.with_base_url }} providers</span></span>
+            </span>
+
+            <span class="badge" style="display: table-row; line-height: 2;">
+                <span style="display: table-cell; float: none; text-align: right;"><span class="badge-left green tooltip" style="float: none; display: inline; text-align: right; border: none">Available sub-databases<span class="tooltiptext">Number of sub-databases aggregated over all providers</span></span></span>
+                <span style="display: table-cell; float: none; text-align: left;"><span class="badge-right" style="float: none; display: inline; text-align: left; border: none">{{ globalsummary.num_sub_databases }} sub-databases</span></span>
+            </span>
+        </div>
+
+    </div>
+
+    <h1>
+        Package list (alphabetically ordered by provider ID)
+    </h1>
+
+    <div id='entrylist'>
+        {% for provider in providers %}
+        <div class='submenu-entry'>
+        <h2><code>{{provider.id}}</code>:
+            <a href="{{ provider.subpage }}">{{ provider.attributes.name }}</a> 
+        </h2>
+
+        {% if provider.attributes.description %}
+        <p class=description>{{provider.attributes.description}}</p>
+        {% endif %}
+
+        <div>
+        {% if provider.index_metadb.num_non_null_subdbs %}
+        <span style="display: table-cell; float: none; text-align: right;"><span class="badge-left green" style="float: none; text-align: right; border: none">Available sub-databases</span></span>
+            <span style="display: table-cell; float: none; text-align: left;"><span class="badge-right" style="float: none; text-align: left; border: none">{{ provider.index_metadb.num_non_null_subdbs }}</span></span>
+        {% endif %}
+        </div>
+
+        <ul class="provider-info">
+
+        <li><strong><a href="{{ provider.subpage }}">Full details for this provider</a></strong></li>
+        {% if provider.attributes.homepage %}
+            <li>Project homepage: <a href="{{ provider.attributes.homepage }}" target="_blank">{{ provider.attributes.homepage }}</a>
+            </li>
+        {% endif %}
+        {% if provider.attributes.base_url %}
+            <li>OPTIMADE API Base URL of the Index Meta-Database: <a href="{{ provider.attributes.base_url }}" target="_blank">{{ provider.attributes.base_url }}</a>
+            </li>
+        {% endif %}
+
+        </ul>
+
+        {% if provider.summaryinfo %}
+        <p class="summaryinfo">
+            {% for summaryinfoelem in provider.summaryinfo %}
+            <span class="badge">
+                <span class="badge-left {{summaryinfoelem.colorclass}}">{{summaryinfoelem.text}}</span>
+                <span class="badge-right">{{summaryinfoelem.count}}</span>
+            </span>
+            {% endfor %}
+        </p>
+	    {% endif %}
+
+        </div>
+
+        {#
+            {% if not loop.last %}
+            <hr>
+            {% endif %}
+        #}
+        {% endfor %}
+    </div>
+
+</main>
+{% endblock body %}

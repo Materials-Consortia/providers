@@ -33,5 +33,8 @@ The repository is organized this way:
 
 - `/providers.json` is a symbolic link continously updated to point at the latest version of the providers.json file under `/src/` to somewhat support hosting solutions that do not understand the instructions in `_redirect`.
 
+- `make_ghpages`: scripts to generate rendered versions of the provider lists, with checks and badges to get an overview
+  of existing providers and databases. This is then pushed on GitHub pages.
+
 Presently, only the `v1` version of the formats exist.
 Hence, to update the list of providers, file a pull-request against the repository to edit `/src/links/v1/providers.json`.

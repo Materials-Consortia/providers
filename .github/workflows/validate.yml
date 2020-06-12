@@ -1,4 +1,4 @@
-name: Scheduled validator
+name: Providers list validation
 
 on:
   push:

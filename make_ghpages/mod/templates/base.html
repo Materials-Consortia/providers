@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    {% block css %}
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="static/favicon.png">
+    {% endblock css %}
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    {% block header %} 
+    <header id='entrytitle' style="background-color: #000; margin: 0; padding: 5px 20px 25px 20px;">
+        <h1>
+            Materials' Consortia <a href="http://www.optimade.org" target="_blank">OPTIMADE</a> list of providers
+        </h1>
+        <p style="font-size: 90%;"><a href="http://github.com/Materials-Consortia/providers" style="color: #999;">[View on GitHub/list your provider]</a> </p>
+      </header>
+
+    {% endblock header %}
+  <div style="max-width: 1200px; margin: auto;">
+    {% block body %} {% endblock body %}
+  </div>
+    {% block footer %}
+    <footer class="footer">
+    <hr>
+      This page is maintained by the <a href="https://github.com/Materials-Consortia/">Materials Consortia OPTIMADE group</a>.
+    {% endblock footer %}
+</body>
+
+</html>

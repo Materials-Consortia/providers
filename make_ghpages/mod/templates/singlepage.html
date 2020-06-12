@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../static/favicon.png">
+{% endblock css %}
+
+{% block body %}
+<main>
+    <h1 class="provider-header">
+        OPTIMADE provider &quot;{{attributes.name}}&quot; (id: <code>{{id}}</code>)
+    </h1>
+
+    <p><a href="../index.html">&lt; back to the full provider list</a></p>
+
+
+
+    <h2>General information</h2>
+    <div>
+        {%  if attributes.description %}
+        <p>
+            <strong>Short description</strong>: {{ attributes.description }}
+        </p>
+        {% endif %}
+        {%  if attributes.homepage %}
+        <p>
+            <strong>Project homepage</strong>: <a href="{{ attributes.homepage }}" target="_blank"><code>{{ attributes.homepage }}</code></a>
+        </p>
+        {% endif %}        
+        <p>
+            <strong>Index Meta-Database URL</strong>: 
+            {%  if attributes.base_url %}
+             <code><a href="{{ attributes.base_url }}" target="_blank">{{ attributes.base_url }}</a></code>
+            {% else %}
+            This provider did not specify yet a <code>base_url</code> for its OPTIMADE implementation.
+            {% endif %}
+        </p>
+    </div>
+
+    <h2>
+        Detailed information
+    </h2>
+    <div class='currentstate'>(information checked on {{ last_check_time }})</div>
+    <div id='description'>
+        <span class="badge" style="display: table-row; line-height: 2;">
+            <span style="display: table-cell; float: none; text-align: right;"><span class="badge-left blue tooltip" style="float: none; display: inline; text-align: right; border: none">Index metaDB ({% if index_metadb.info_endpoint %}<a href="{{ index_metadb.info_endpoint }}" target="_blank">{% endif %}<code>/info</code>{% if index_metadb.info_endpoint %}</a>{% endif %})<span class="tooltiptext">State of the <code>/info</code> endpoint of the index meta-database</span></span></span>
+            <span style="display: table-cell; float: none; text-align: left;"><span class="badge-right {{ index_metadb.color }} tooltip" style="float: none; display: inline; text-align: left; border: none">{{ index_metadb.state }}<span class="tooltiptext">
+                {% if index_metadb.tooltip_lines %} {% for line in index_metadb.tooltip_lines %}{{ line }}<br />{% endfor %} {% else %} {{ index_metadb.state }} {% endif %}
+            </span></span></span>            
+        </span>
+        {% if index_metadb.version %}
+        <span class="badge" style="display: table-row; line-height: 2;">
+            <span style="display: table-cell; float: none; text-align: right;"><span class="badge-left blue tooltip" style="float: none; display: inline; text-align: right; border: none">Index metaDB version<span class="tooltiptext">Version of the index meta-database</span></span></span>
+            <span style="display: table-cell; float: none; text-align: left;"><span class="badge-right dark-gray" style="float: none; display: inline; text-align: left; border: none">{{ index_metadb.version }}</span></span>            
+        </span>
+        {% endif %}
+        {% if index_metadb.links_state %}
+        <span class="badge" style="display: table-row; line-height: 2;">
+            <span style="display: table-cell; float: none; text-align: right;"><span class="badge-left blue tooltip" style="float: none; display: inline; text-align: right; border: none">Index metaDB ({% if index_metadb.links_endpoint %}<a href="{{ index_metadb.links_endpoint }}" target="_blank">{% endif %}<code>/links</code>{% if index_metadb.links_endpoint %}</a>{% endif %})<span class="tooltiptext">State of the <code>/links</code> endpoint of the index meta-database</span></span></span>
+            <span style="display: table-cell; float: none; text-align: left;"><span class="badge-right {{ index_metadb.links_color }} tooltip" style="float: none; display: inline; text-align: left; border: none">{{ index_metadb.links_state }}<span class="tooltiptext">
+                {% if index_metadb.links_tooltip_lines %} {% for line in index_metadb.links_tooltip_lines %}{{ line }}<br />{% endfor %} {% else %} {{ index_metadb.links_state }} {% endif %}
+            </span></span></span>            
+        </span>
+        {% endif %}
+
+
+        {% if index_metadb.subdbs %}
+        <h3>Sub-databases provided by the provider</h3>
+        <ul>
+        {% for subdb in index_metadb.subdbs %}
+        <li>
+            <p><strong><a href="{{subdb.attributes.base_url}}" target="_blank">{{subdb.attributes.name}}</strong></a>
+        (<code>{{subdb.id}}{% if index_metadb.default_subdb == subdb.id %}, default sub-database{% endif %}</code>)
+        </p>
+        <div>{{subdb.attributes.description}}</div>
+        </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+</main>
+
+{% endblock body %}
