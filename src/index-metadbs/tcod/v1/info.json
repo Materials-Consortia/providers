@@ -1,0 +1,34 @@
+{
+   "data" : {
+      "attributes" : {
+         "available_api_versions" : [
+            {
+               "version" : "1.0.0",
+               "url" : "http://providers.optimade.org/index-metadbs/tcod/v1/"
+            }
+         ],
+         "is_index" : true,
+         "formats" : [
+            "json"
+         ],
+         "entry_types_by_format" : {
+            "json" : []
+         },
+         "available_endpoints" : [
+            "info",
+            "links"
+         ],
+         "api_version" : "v1.0.0"
+      },
+      "type" : "info",
+      "relationships" : {
+         "default" : {
+            "data" : {
+               "id" : "cod",
+               "type" : "links"
+            }
+         }
+      },
+      "id" : "/"
+   }
+}
