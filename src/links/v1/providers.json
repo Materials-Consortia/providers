@@ -125,7 +125,7 @@
       "type": "links",
       "id": "optimade",
       "attributes": {
-        "name": "OPTiMaDe implementations and libraries",
+        "name": "OPTIMADE implementations and libraries",
         "description": "Prefix for implementation-specific identifiers used in API implementations and libraries provided at https://github.com/Materials-Consortia",
         "base_url": null,
         "homepage": "https://www.optimade.org",

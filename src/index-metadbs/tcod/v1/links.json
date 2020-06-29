@@ -1,7 +1,7 @@
 {
    "data" : [
       {
-         "id" : "cod",
+         "id" : "tcod",
          "type" : "links",
          "attributes" : {
             "name": "Theoretical Crystallography Open Database",

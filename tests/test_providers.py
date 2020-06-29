@@ -21,7 +21,7 @@ def query_optimade(url):
     This is important to allow testing of new endpoints before the PR
     is merged in GitHub (and only after things are merged in the main branch,
     they will appear on `providers.optimade.org`)
-    
+
     :param url: a string with the URL to fetch
     :return: the raw content.
     :raise urllib.error.HTTPError: if the page is not found. Note that this exception
