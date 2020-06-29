@@ -5,7 +5,7 @@
          "type" : "links",
          "attributes" : {
             "name": "Materials Project",
-            "description": "The Materials Project",
+            "description": "The Materials Project: A database of computed materials properties for the discovery and design of novel materials.",
             "base_url": "https://optimade.materialsproject.org",
             "homepage": "https://materialsproject.org",
             "link_type": "child"
