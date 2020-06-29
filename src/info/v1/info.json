@@ -2,6 +2,7 @@
   "data": {
     "type": "info",
     "id": "/",
+    "relationships": {},
     "attributes": {
       "api_version": "1.0.0-rc.2",
       "available_api_versions": [
