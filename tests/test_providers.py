@@ -7,7 +7,7 @@ import unittest
 import urllib.request
 import urllib.parse
 
-from optimade.models import IndexInfoResponse, LinksResponse
+from optimade.models import IndexInfoResponse, LinksResponse, Link
 
 TOP_DIR = pathlib.Path(__file__).parent.parent
 
@@ -101,14 +101,18 @@ class ProvidersValidator(unittest.TestCase):
                 json_rep = json.load(f)
             response = LinksResponse(**json_rep)
             for entry in response.data:
-                entry_id = entry["id"]
-                if entry.get('attributes', {}).get('base_url') is not None:
+                entry_id = entry.id
+                if entry.attributes.dict().get("base_url", None) is not None:
                     # the provider has a non-null base_url
                     print(f'[INFO] Checking provider "{entry_id}" ({version})')
 
-
                     # I check the /info endpoint
-                    info_endpoint = f'{entry["attributes"]["base_url"]}/{version}/info'
+                    entry_base_url = (
+                        entry.attributes.base_url.href
+                        if isinstance(entry.attributes.base_url, Link)
+                        else entry.attributes.base_url
+                    )
+                    info_endpoint = f'{entry_base_url}/{version}/info'
                     tested_info_endpoints = [info_endpoint]                    
                     try:
                         try:
@@ -117,12 +121,12 @@ class ProvidersValidator(unittest.TestCase):
                             if apply_v0_workarounds and version == 'v1' and exc.code == 404:
                                 try:
                                     # Temporary workaround for optimade-python-tools while v1 is released
-                                    info_endpoint = f'{entry["attributes"]["base_url"]}/v0.10/info'
+                                    info_endpoint = f'{entry_base_url}/v0.10/info'
                                     tested_info_endpoints.append(info_endpoint)
                                     response_content = query_optimade(info_endpoint)
                                 except urllib.error.HTTPError as exc:
                                     # Temporary workaround for nomad that uses v0 as a prefix
-                                    info_endpoint = f'{entry["attributes"]["base_url"]}/v0/info'
+                                    info_endpoint = f'{entry_base_url}/v0/info'
                                     tested_info_endpoints.append(info_endpoint)
                                     response_content = query_optimade(info_endpoint)                              
                             else:
