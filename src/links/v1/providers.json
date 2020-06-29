@@ -70,7 +70,7 @@
       "type": "links",
       "id": "mp",
       "attributes": {
-        "name": "materialsproject.org",
+        "name": "mp",
         "description": "The Materials Project: A database of computed materials properties for the discovery and design of novel materials.",
         "base_url": "http://providers.optimade.org/index-metadbs/cod",
         "homepage": "https://materialsproject.org",
