@@ -4,10 +4,10 @@
          "id" : "exmpl",
          "type" : "links",
          "attributes" : {
-            "name": "Example provider",
-            "description": "Provider used for examples, not to be assigned to a real database",
-            "base_url": null,
-            "homepage": "https://example.com",
+            "name": "Materials Project",
+            "description": "The Materials Project",
+            "base_url": "https://optimade.materialsproject.org",
+            "homepage": "https://materialsproject.org",
             "link_type": "child"
          }
       },
