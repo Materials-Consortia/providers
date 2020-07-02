@@ -4,7 +4,7 @@
 
 The list of providers is published as an [OPTIMADE](https://www.optimade.org/) Index Meta-Database here: [https://providers.optimade.org/](https://providers.optimade.org/)
 
-You can obtain the list of providers in a machine-readable format following the [OPTIMADE specification for Index Meta-Databases](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst#32index-meta-database) by using the following URL:
+You can obtain the list of providers in a machine-readable format following the [OPTIMADE specification for Index Meta-Databases](https://github.com/Materials-Consortia/OPTIMADE/blob/v1.0.0/optimade.rst#index-meta-database) by using the following URL:
 
 - [https://providers.optimade.org/v1/links](https://providers.optimade.org/v1/links)
 
@@ -43,7 +43,7 @@ Hence, to update the list of providers, file a pull-request against the reposito
 
 ## Requirements to be listed in this providers list
 
-It is a policy of this providers list ([providers.optimade.org](http://providers.optimade.org)) that links inside `providers.json` must be links to an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst#32index-meta-database).
+It is a policy of this providers list ([providers.optimade.org](http://providers.optimade.org)) that links inside `providers.json` must be links to an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/v1.0.0/optimade.rst#index-meta-database).
 
 If you only have one or few databases in your implementation, and you do not want to host an Index Meta-Database yourself, you can host the Index Meta-Database directly in this repository.
 You can find instructions [here](./src/index-metadbs).
