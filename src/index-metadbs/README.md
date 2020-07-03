@@ -2,7 +2,7 @@
 
 ## Goal
 
-This folder hosts static versions of Index Meta-Databases for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/v1.0.0/optimade.rst#index-meta-database) themselves.
+This folder hosts static versions of Index Meta-Databases for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/master/optimade.rst#index-meta-database) themselves.
 
 Note: while providing an Index Meta-Database is not required by the OPTIMADE API specification, it is instead required in order to be listed in this List of Providers ([providers.optimade.org](http://providers.optimade.org)).
 
@@ -28,14 +28,14 @@ Note that "changes" here refer solely to changes to the *list of sub-databases*;
    - change the attributes `name`, `description` and `homepage` to contain the correct content.
      Please reuse the *same* content as the one you specified in the main `providers.json` file.
    - point the `base_url` to the base URL of your OPTIMADE implementation.
-     Note, this should be the un-versioned base URL (see [the OPTIMADE API specification](https://github.com/Materials-Consortia/OPTIMADE/blob/v1.0.0/optimade.rst#base-url) for more information on this).
+     Note, this should be the un-versioned base URL (see [the OPTIMADE API specification](https://github.com/Materials-Consortia/OPTIMADE/blob/master/optimade.rst#base-url) for more information on this).
 
 3. Adapt the content of the `info.json` file.
    In particular, you should change two fields:
 
    - change the URL of the `available_api_versions` by replacing `exmpl` with your identifier: `http://providers.optimade.org/index-metadbs/exmpl2/v1/`.
    - change the `id` inside `data -> relationships -> default -> data -> id` from `exmpl` to the correct ID from the list of links in the `links.json` file.
-     As [explained in the OPTIMADE API specification](https://github.com/Materials-Consortia/OPTIMADE/blob/v1.0.0/optimade.rst#base-info-endpoint), this should be the ID of the database that should be considered as the "default" sub-database by clients.
+     As [explained in the OPTIMADE API specification](https://github.com/Materials-Consortia/OPTIMADE/blob/master/optimade.rst#base-info-endpoint), this should be the ID of the database that should be considered as the "default" sub-database by clients.
 
      If you only have one sub-database and you followed the instructions above, you should use here your provider identifier.
      If you do not wish to have a default database, set the `relationships` value to an empty dictionary or set the value of `relationships -> default -> data` to `null`.
