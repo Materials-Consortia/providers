@@ -1,9 +1,17 @@
 {
+   "meta" : {
+       "api_version" : "1.0.0",
+       "query" : {
+           "representation" : "/info"
+       },
+       "more_data_available" : false,
+       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
    "data" : {
       "attributes" : {
          "available_api_versions" : [
             {
-               "version" : "1.0.0-rc.2",
+               "version" : "1.0.0",
                "url" : "http://providers.optimade.org/index-metadbs/exmpl/v1/"
             }
          ],
@@ -18,7 +26,7 @@
             "info",
             "links"
          ],
-         "api_version" : "1.0.0-rc.2"
+         "api_version" : "1.0.0"
       },
       "type" : "info",
       "relationships" : {
