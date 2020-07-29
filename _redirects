@@ -12,3 +12,5 @@
 # Provide redirects for index meta-databases (removing the JSON at the end)
 /index-metadbs/:providerid/:version/links /src/index-metadbs/:providerid/:version/links.json 200!
 /index-metadbs/:providerid/:version/info /src/index-metadbs/:providerid/:version/info.json 200!
+
+/.well-known/* /well-known/:splat 200!
