@@ -78,10 +78,10 @@
       "type": "links",
       "id": "mp",
       "attributes": {
-        "name": "materialsproject.org",
-        "description": "",
-        "base_url": null,
-        "homepage": null,
+        "name": "The Materials Project",
+        "description": "An open database of computed materials properties to accelerate materials discovery and design",
+        "base_url": "http://providers.optimade.org/index-metadbs/mp",
+        "homepage": "https://www.materialsproject.org",
         "link_type": "external"
       }
     },
