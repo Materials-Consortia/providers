@@ -79,7 +79,7 @@
       "id": "mp",
       "attributes": {
         "name": "The Materials Project",
-        "description": "The Materials Project OPTIMADE endpoint",
+        "description": "An open database of computed materials properties to accelerate materials discovery and design",
         "base_url": "http://providers.optimade.org/index-metadbs/mp",
         "homepage": "https://www.materialsproject.org",
         "link_type": "external"
