@@ -14,6 +14,10 @@ For convenience, you can also access the most recent list of providers in the fo
 
 - [https://providers.optimade.org/providers.json](https://providers.optimade.org/providers.json)
 
+Additionally, there is a providers dashboard that includes the results of validation of listed implementations. This can be accessed at the following URL:
+
+- [https://optimade.org/providers-dashboard](https://optimade.org/providers-dashboard)
+
 You can contribute a new provider or amend the current information by creating a pull request to [the `providers` repository](https://github.com/Materials-Consortia/providers).
 
 ## Repository organization
