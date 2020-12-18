@@ -144,10 +144,10 @@
       "type": "links",
       "id": "oqmd",
       "attributes": {
-        "name": "open quantum materials database",
-        "description": "",
-        "base_url": null,
-        "homepage": null,
+        "name": "The Open Quantum Materials Database",
+        "description": "The OQMD is a database of DFT calculated thermodynamic and structural properties of materials",
+        "base_url": "http://oqmd.org/optimade",
+        "homepage": "http://oqmd.org",
         "link_type": "external"
       }
     },
