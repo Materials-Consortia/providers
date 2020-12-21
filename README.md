@@ -47,3 +47,29 @@ It is a policy of this providers list ([providers.optimade.org](http://providers
 
 If you only have one or few databases in your implementation, and you do not want to host an Index Meta-Database yourself, you can host the Index Meta-Database directly in this repository.
 You can find instructions [here](./src/index-metadbs).
+
+## Fork this repository to set up an index meta-database for your own databases
+
+- Click on the Fork button in GitHub and follow the instructions.
+
+- Edit `/src/info/v1/info.json` with your information:
+
+  - Make sure to update the URL in `available_api_versions` to point at your hosting location.
+
+- Copy the file `src/index-metadbs/exmpl/v1/links.json` to `/src/info/v1/links.json` and edit this template to supply information about your own databases.
+
+- Edit `README.md` to say who you are and what databases you provide.
+
+- Remove the directory 'src/static-index-metadbs'
+
+- Configure your hosting provider to use your forked repository.
+  The repository presently contains configuration files for Netlify, which you can set up as follows:
+
+  - Deploy using the Netlify *Continuous Deployment: GitHub App* option, and give it access to your forked repository with the following settings:
+  
+    - Build commmand: `jekyll build`
+    - Publish directory: `_site/`
+
+  - You are also recommended to configure a subdomain in *Domain settings* at Netlify, or setup your own custom domain.
+
+- If you are a provider of OPTIMADE databases and you have set up the index meta-database to point at them, please post a pull-request against [https://github.com/Materials-Consortia/providers](https://github.com/Materials-Consortia/providers) to add the URL for your index meta-database to the central OPTIMADE providers list.
