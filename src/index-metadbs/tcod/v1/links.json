@@ -1,0 +1,34 @@
+{
+   "meta" : {
+       "api_version" : "1.0.0",
+       "query" : {
+           "representation" : "/links"
+       },
+       "more_data_available" : false,
+       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
+   "data" : [
+      {
+         "id" : "tcod",
+         "type" : "links",
+         "attributes" : {
+            "name": "Theoretical Crystallography Open Database",
+            "description": "Open-access collection of theoretically calculated or refined crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers",
+            "base_url": "https://www.crystallography.net/tcod/optimade",
+            "homepage": "https://www.crystallography.net/tcod",
+            "link_type": "child"
+         }
+      },
+      {
+         "id" : "optimade-providers",
+         "type" : "links",
+         "attributes" : {
+            "name": "OPTIMADE Providers Index Meta-Database",
+            "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
+            "base_url": "https://providers.optimade.org",
+            "homepage": "https://www.optimade.org",
+            "link_type": "providers"
+         }
+      }
+   ]
+}

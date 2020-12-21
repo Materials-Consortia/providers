@@ -14,8 +14,12 @@ For convenience, you can also access the most recent list of providers in the fo
 
 - [https://providers.optimade.org/providers.json](https://providers.optimade.org/providers.json)
 
-You can contribute a new provider or amend the current information by creating a pull request to [the `providers` repository](https://github.com/Materials-Consortia/providers).
+Additionally, there is a providers dashboard that includes the results of validation of listed implementations.
+This can be accessed at the following URL:
 
+- [https://optimade.org/providers-dashboard](https://optimade.org/providers-dashboard)
+
+You can contribute a new provider or amend the current information by creating a pull request to [the `providers` repository](https://github.com/Materials-Consortia/providers).
 
 ## Repository organization
 
@@ -27,14 +31,22 @@ The repository is organized this way:
 
 - `/src/info/<version>/info.json` is the proper response to the info endpoint formatted according to OPTIMADE version `<version>` and any later version that uses a format that is backward compatible with this version.
 
-- `/_redirect` specify http rewrites to map index meta-database URLs `/<version>/info` and `/<version>/links` to the corresponding files under `src/`, as well as `/providers.json`.
+- `/src/index-metadbs/<provider_name>/<version>/info.json` and `/src/index-metadbs/<provider_name>/<version>/links.json` are static Index Meta-Databases that are hosted in this repository for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain one on their own.
+  See more details and instructions in `/src/index-metadbs/README.md`.
 
-- `/<version>` directories contain symlinks `info.html` and `links.html` to the corresponding files under `src/` to somewhat support hosting solutions that do not understand the instructions in `_redirect` but which support "pretty URLs".
-
-- `/providers.json` is a symbolic link continously updated to point at the latest version of the providers.json file under `/src/` to somewhat support hosting solutions that do not understand the instructions in `_redirect`.
+- `/_redirects` specifies http rewrites to map index meta-database URLs `/<version>/info` and `/<version>/links` to the corresponding files under `src/`, as well as `/providers.json`.
+  It also creates `/index-metadbs/<provider_name>/<version>/info.json` and `/index-metadbs/<provider_name>/<version>/links.json` URLs to point to the corresponding files in the `/src/index-metadbs` subfolders.
+  This is used by the deploy tool Netlify.
 
 Presently, only the `v1` version of the formats exist.
 Hence, to update the list of providers, file a pull-request against the repository to edit `/src/links/v1/providers.json`.
+
+## Requirements to be listed in this providers list
+
+It is a policy of this providers list ([providers.optimade.org](http://providers.optimade.org)) that links inside `providers.json` must be links to an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/develop/optimade.rst#32index-meta-database).
+
+If you only have one or few databases in your implementation, and you do not want to host an Index Meta-Database yourself, you can host the Index Meta-Database directly in this repository.
+You can find instructions [here](./src/index-metadbs).
 
 ## Fork this repository to set up an index meta-database for your own databases
 
