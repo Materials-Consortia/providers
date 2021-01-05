@@ -123,7 +123,7 @@
       "id": "omdb",
       "attributes": {
         "name": "Open Materials Database",
-        "description": "The Open Materials Database (omdb) is a database of materials properties maintained by the developers of the High-Throughput Toolkit (httk) to enable easy programmatic interaction with this toolkit",
+        "description": "The Open Materials Database (omdb) is a database of materials properties maintained by the developers of the High-Throughput Toolkit (httk). It enables easy access to useful materials data, in particular via programmatic interaction using this toolkit.",
         "base_url": "https://optimade-index.openmaterialsdb.se",
         "homepage": "http://openmaterialsdb.se",
         "link_type": "external"
