@@ -5,10 +5,12 @@
 # Returning 200 just returns the content without doing a HTTP redirect, i.e.
 # without changing the URL, that is what we want to achieve here
 # https://docs.netlify.com/routing/redirects/redirect-options/#http-status-codes
+/versions	/src/versions.csv	200!
 /providers.json	/src/links/v1/providers.json	200!
 /v1/links	/src/links/v1/providers.json	200!
 /v1/info	/src/info/v1/info.json	200!
 
 # Provide redirects for index meta-databases (removing the JSON at the end)
+/index-metadbs/:providerid/versions /src/versions.csv 200!
 /index-metadbs/:providerid/:version/links /src/index-metadbs/:providerid/:version/links.json 200!
 /index-metadbs/:providerid/:version/info /src/index-metadbs/:providerid/:version/info.json 200!
