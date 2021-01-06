@@ -24,9 +24,9 @@
       "id": "aflow",
       "attributes": {
         "name": "AFLOW",
-        "description": "",
-        "base_url": "http://providers.optimade.org/index-metadbs/aflow",
-        "homepage": "https://aflow.org",
+        "description": "Automatic FLOW (AFLOW) database for computational materials science",
+        "base_url": "https://providers.optimade.org/index-metadbs/aflow",
+        "homepage": "http://aflow.org",
         "link_type": "external"
       }
     },
