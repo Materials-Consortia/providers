@@ -30,6 +30,7 @@ jobs:
       with:
         index: yes
         protocol: https
-        domain: deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app/v1
+        domain: deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app
+        path: /
         validator version: master
         verbosity: 2
