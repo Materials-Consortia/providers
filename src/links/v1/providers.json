@@ -23,10 +23,10 @@
       "type": "links",
       "id": "aflow",
       "attributes": {
-        "name": "aflow.org",
-        "description": "",
-        "base_url": null,
-        "homepage": null,
+        "name": "AFLOW",
+        "description": "Automatic FLOW (AFLOW) database for computational materials science",
+        "base_url": "https://providers.optimade.org/index-metadbs/aflow",
+        "homepage": "http://aflow.org",
         "link_type": "external"
       }
     },
