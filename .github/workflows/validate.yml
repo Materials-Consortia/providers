@@ -30,7 +30,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Wait for the preview site to be up
-      run: .github/workflows/wait_for_it.sh --host="https://${DEPLOY_PREVIEW}" --port=443 -t 30
+      run: .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 30
     - uses: Materials-Consortia/optimade-validator-action@v2
       with:
         index: yes
@@ -45,7 +45,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     env:
-      DEPLOY_PREVIEW: "https://deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app"
+      DEPLOY_PREVIEW: "deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app"
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -62,5 +62,5 @@ jobs:
         providers=$(find src/index-metadbs/ -maxdepth 1 -mindepth 1 -type d -printf ' %f' | cut -d / -f 3 )
         .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 30
         for provider in ${providers[@]}; do
-          optimade-validator -vv --index ${DEPLOY_PREVIEW}/index-metadbs/${provider}/v1/
+          optimade-validator -vv --index https://${DEPLOY_PREVIEW}/index-metadbs/${provider}/v1/
         done
