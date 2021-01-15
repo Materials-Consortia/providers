@@ -54,5 +54,5 @@ jobs:
       run: |
         providers=$(find src/index-metadbs/ -maxdepth 1 -mindepth 1 -type d -printf ' %f' | cut -d / -f 3 )
         for provider in ${providers[@]}; do
-          optimade-validator --verbosity 2 --index https://deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app/index-metadbs/$provider/
+          optimade-validator -vv --index https://deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app/index-metadbs/${provider}/v1/
         done
