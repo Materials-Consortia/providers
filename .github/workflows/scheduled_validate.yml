@@ -1,0 +1,22 @@
+name: Scheduled validator
+
+on: [push]
+
+jobs:
+
+  pytest:
+    name: Sanity checks (pytest)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install OPTIMADE
+      run: |
+        python -m pip install --upgrade pip
+        pip install -U setuptools
+        pip install optimade pytest
+    - name: Run local tests on repository
+      run: pytest
