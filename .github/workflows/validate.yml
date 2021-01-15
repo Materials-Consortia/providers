@@ -28,8 +28,9 @@ jobs:
     env:
       DEPLOY_PREVIEW: "deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app"
     steps:
+    - uses: actions/checkout@v2
     - name: Wait for the preview site to be up
-      run: .github/workflows/wait_for_it.sh https://${DEPLOY_PREVIEW} -t 360
+      run: .github/workflows/wait_for_it.sh https://${DEPLOY_PREVIEW} -t 30
     - uses: Materials-Consortia/optimade-validator-action@v2
       with:
         index: yes
@@ -59,7 +60,7 @@ jobs:
     - name: Run validator for all local index meta-dbs
       run: |
         providers=$(find src/index-metadbs/ -maxdepth 1 -mindepth 1 -type d -printf ' %f' | cut -d / -f 3 )
-        .github/workflows/wait_for_it.sh ${DEPLOY_PREVIEW} -t 360
+        .github/workflows/wait_for_it.sh ${DEPLOY_PREVIEW} -t 30
         for provider in ${providers[@]}; do
           optimade-validator -vv --index ${DEPLOY_PREVIEW}/index-metadbs/${provider}/v1/
         done
