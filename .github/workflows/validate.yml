@@ -34,3 +34,25 @@ jobs:
         path: /
         validator version: latest
         verbosity: 2
+
+  validate_local_index_dbs:
+    name: OPTIMADE validator (local index meta-dbs)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install OPTIMADE
+      run: |
+        python -m pip install --upgrade pip
+        pip install -U setuptools
+        pip install optimade
+    - name: Run validator for all local index meta-dbs
+      run: |
+        providers=$(find src/index-metadbs/ -maxdepth 1 -mindepth 1 -type d -printf ' %f' | cut -d / -f 3 )
+        for provider in ${providers[@]}; do
+          optimade-validator --verbosity 2 --index https://deploy-preview-${{ github.event.number }}--optimade-providers.netlify.app/index-metadbs/$provider/
+        done
