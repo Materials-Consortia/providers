@@ -14,7 +14,7 @@
             "attributes": {
                 "name": "The OQMD",
                 "description": "The Open Quantum Materials Database endpoint",
-                "base_url": "http://oqmd.org/optimade/",
+                "base_url": "http://oqmd.org/optimade",
                 "homepage": "http://oqmd.org",
                 "link_type": "child"
             }
