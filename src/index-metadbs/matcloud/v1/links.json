@@ -1,0 +1,34 @@
+{
+   "meta" : {
+       "api_version" : "1.0.0",
+       "query" : {
+           "representation" : "/links"
+       },
+       "more_data_available" : false,
+       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
+   "data" : [
+      {
+         "id" : "matcloud",
+         "type" : "links",
+         "attributes" : {
+            "name": "An integrated high-throughput computational materials platform",
+            "description": "MatCloud is a high-throughput computing platform integrating data, simulation and supercomputing.",
+            "base_url": null,
+            "homepage": "http://matcloud.cnic.cn",
+            "link_type": "child"
+         }
+      },
+      {
+         "id" : "optimade-providers",
+         "type" : "links",
+         "attributes" : {
+            "name": "OPTIMADE Providers Index Meta-Database",
+            "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
+            "base_url": "https://providers.optimade.org",
+            "homepage": "https://www.optimade.org",
+            "link_type": "providers"
+         }
+      }
+   ]
+}
