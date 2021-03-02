@@ -1,0 +1,199 @@
+{
+   "meta" : {
+       "api_version" : "1.0.0",
+       "query" : {
+           "representation" : "/links"
+       },
+       "more_data_available" : false,
+       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
+   "data": [
+    {
+      "type": "links",
+      "id": "aiida",
+      "attributes": {
+        "name": "AiiDA",
+        "description": "Automated Interactive Infrastructure and Database for Computational Science (AiiDA)",
+        "base_url": null,
+        "homepage": "http://www.aiida.net",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "aflow",
+      "attributes": {
+        "name": "AFLOW",
+        "description": "Automatic FLOW (AFLOW) database for computational materials science",
+        "base_url": "https://providers.optimade.org/index-metadbs/aflow",
+        "homepage": "http://aflow.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "cod",
+      "attributes": {
+        "name": "Crystallography Open Database",
+        "description": "Open-access collection of crystal structures of organic, inorganic, metal-organics compounds and minerals, excluding biopolymers",
+        "base_url": "http://providers.optimade.org/index-metadbs/cod",
+        "homepage": "https://www.crystallography.net/cod",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "exmpl",
+      "attributes": {
+        "name": "Example provider",
+        "description": "Provider used for examples, not to be assigned to a real database",
+        "base_url": "http://providers.optimade.org/index-metadbs/exmpl",
+        "homepage": "https://example.com",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "httk",
+      "attributes": {
+        "name": "The High-Throughput Toolkit",
+        "description": "Prefix for implementation-specific identifiers used in the httk implementation at http://httk.org/",
+        "base_url": null,
+        "homepage": null,
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "matcloud",
+      "attributes": {
+        "name": "An integrated high-throughput computational materials platform",
+        "description": "MatCloud is a high-throughput computing platform integrating data, simulation and supercomputing.",
+        "base_url": "https://providers.optimade.org/index-metadbs/matcloud",
+        "homepage": "http://matcloud.cnic.cn",
+        "link_type": "external"
+      }
+    },
+     {
+      "type": "links",
+      "id": "mcloud",
+      "attributes": {
+        "name": "Materials Cloud",
+        "description": "A platform for Open Science built for seamless sharing of resources in computational materials science",
+        "base_url": "https://www.materialscloud.org/optimade",
+        "homepage": "https://www.materialscloud.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "mp",
+      "attributes": {
+        "name": "The Materials Project",
+        "description": "An open database of computed materials properties to accelerate materials discovery and design",
+        "base_url": "http://providers.optimade.org/index-metadbs/mp",
+        "homepage": "https://www.materialsproject.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "mpds",
+      "attributes": {
+        "name": "materials platform for data science",
+        "description": "",
+        "base_url": null,
+        "homepage": null,
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "nmd",
+      "attributes": {
+        "name": "novel materials discovery (NOMAD)",
+        "description": "A FAIR data sharing platform for materials science data",
+        "base_url": "https://nomad-lab.eu/prod/rae/optimade/index",
+        "homepage": "https://nomad-lab.eu",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "odbx",
+      "attributes": {
+        "name": "open database of xtals",
+        "description": "A public database of crystal structures mostly derived from ab initio structure prediction from the group of Dr Andrew Morris at the University of Birmingham https://ajm143.github.io",
+        "base_url": "https://optimade-index.odbx.science",
+        "homepage": "https://odbx.science",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "omdb",
+      "attributes": {
+        "name": "Open Materials Database",
+        "description": "The Open Materials Database (omdb) is a database of materials properties maintained by the developers of the High-Throughput Toolkit (httk). It enables easy access to useful materials data, in particular via programmatic interaction using this toolkit.",
+        "base_url": "https://optimade-index.openmaterialsdb.se",
+        "homepage": "http://openmaterialsdb.se",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "optimade",
+      "attributes": {
+        "name": "OPTIMADE implementations and libraries",
+        "description": "Prefix for implementation-specific identifiers used in API implementations and libraries provided at https://github.com/Materials-Consortia",
+        "base_url": null,
+        "homepage": "https://www.optimade.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "oqmd",
+      "attributes": {
+        "name": "The Open Quantum Materials Database (OQMD)",
+        "description": "The OQMD is a database of DFT calculated thermodynamic and structural properties of materials",
+        "base_url": "http://providers.optimade.org/index-metadbs/oqmd",
+        "homepage": "http://oqmd.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "jarvis",
+      "attributes": {
+        "name": "Joint Automated Repository for Various Integrated Simulations (JARVIS)",
+        "description": "JARVIS is a repository designed to automate materials discovery using classical force-field, density functional theory, machine learning calculations and experiments.",
+        "base_url": null,
+        "homepage": "https://jarvis.nist.gov",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "pcod",
+      "attributes": {
+        "name": "Predicted Crystallography Open Database",
+        "description": "",
+        "base_url": null,
+        "homepage": null,
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "tcod",
+      "attributes": {
+        "name": "Theoretical Crystallography Open Database",
+        "description": "Open-access collection of theoretically calculated or refined crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers",
+        "base_url": "http://providers.optimade.org/index-metadbs/tcod",
+        "homepage": "https://www.crystallography.net/tcod",
+        "link_type": "external"
+      }
+    }
+  ]
+}
