@@ -67,8 +67,8 @@
       "type": "links",
       "id": "matcloud",
       "attributes": {
-        "name": "An integrated high-throughput computational materials platform",
-        "description": "MatCloud is a high-throughput computing platform integrating data, simulation and supercomputing.",
+        "name": "MatCloud",
+        "description": "A high-throughput computing platform integrating data, simulation and supercomputing.",
         "base_url": "https://providers.optimade.org/index-metadbs/matcloud",
         "homepage": "http://matcloud.cnic.cn",
         "link_type": "external"
