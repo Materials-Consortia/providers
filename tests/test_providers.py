@@ -12,7 +12,7 @@ from optimade.models import IndexInfoResponse, LinksResponse, Link
 TOP_DIR = pathlib.Path(__file__).parent.parent
 
 # To be disabled if/when we do not wish to allow to point to v0 endpoints
-apply_v0_workarounds = True
+apply_v0_workarounds = False
 
 
 def query_optimade(url):
@@ -156,7 +156,7 @@ class ProvidersValidator(unittest.TestCase):
                             if len(tested_info_endpoints) == 1
                             else f" (I tried all these URLs: {tested_info_endpoints})"
                         )
-                        problems.append(
+                        print(
                             f'Provider "{entry_id}" {info_endpoint} endpoint is not reachable{fallback_string}. Error: {str(exc)}'
                         )
                         continue
