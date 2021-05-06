@@ -19,4 +19,4 @@ jobs:
         pip install -U setuptools
         pip install optimade pytest
     - name: Run local tests on repository
-      run: pytest
+      run: pytest -s
