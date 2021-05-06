@@ -100,10 +100,10 @@
       "type": "links",
       "id": "mpds",
       "attributes": {
-        "name": "materials platform for data science",
-        "description": "",
-        "base_url": null,
-        "homepage": null,
+        "name": "Materials Platform for Data Science",
+        "description": "A highly curated Pauling File dataset based on ~0.5M publications and backing up Springer Materials, ICDD PDF, ASM APD, MedeA, Pearson Crystal Data, AtomWork Advanced, etc.",
+        "base_url": "https://providers.optimade.org/index-metadbs/mpds",
+        "homepage": "https://mpds.io",
         "link_type": "external"
       }
     },

@@ -1,0 +1,34 @@
+{
+   "meta" : {
+       "api_version" : "1.0.0",
+       "query" : {
+           "representation" : "/links"
+       },
+       "more_data_available" : false,
+       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
+   "data" : [
+      {
+         "id" : "mpds",
+         "type" : "links",
+         "attributes" : {
+            "name": "Materials Platform for Data Science",
+            "description": "A highly curated Pauling File dataset based on ~0.5M publications and backing up Springer Materials, ICDD PDF, ASM APD, MedeA, Pearson Crystal Data, AtomWork Advanced, etc.",
+            "base_url": "https://api.mpds.io",
+            "homepage": "https://mpds.io",
+            "link_type": "child"
+         }
+      },
+      {
+         "id" : "optimade-providers",
+         "type" : "links",
+         "attributes" : {
+            "name": "OPTIMADE Providers Index Meta-Database",
+            "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
+            "base_url": "https://providers.optimade.org",
+            "homepage": "https://www.optimade.org",
+            "link_type": "providers"
+         }
+      }
+   ]
+}
