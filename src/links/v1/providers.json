@@ -109,6 +109,17 @@
     },
     {
       "type": "links",
+      "id": "necro",
+      "attributes": {
+        "name": "NecrOPTIMADE",
+        "description": "A provider of ephemeral OPTIMADE APIs for static or archived data.",
+        "base_url": "https://necroptimade.herokuapp.com",
+        "homepage": "https://github.com/ml-evs/necroptimade",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "nmd",
       "attributes": {
         "name": "novel materials discovery (NOMAD)",
