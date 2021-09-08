@@ -179,7 +179,7 @@
       "attributes": {
         "name": "Joint Automated Repository for Various Integrated Simulations (JARVIS)",
         "description": "JARVIS is a repository designed to automate materials discovery using classical force-field, density functional theory, machine learning calculations and experiments.",
-        "base_url": null,
+        "base_url": "http://providers.optimade.org/index-metadbs/jarvis",
         "homepage": "https://jarvis.nist.gov",
         "link_type": "external"
       }
