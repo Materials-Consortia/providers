@@ -205,6 +205,17 @@
         "homepage": "https://www.crystallography.net/tcod",
         "link_type": "external"
       }
+    },
+    {
+      "type": "links",
+      "id": "2dmatpedia",
+      "attributes": {
+        "name": "2DMatpedia",
+        "description": "2DMatpedia, an open computational database of two-dimensional materials from top-down and bottom-up approaches",
+        "base_url": "http://providers.optimade.org/index-metadbs/2dmatpedia",
+        "homepage": "http://2dmatpedia.org",
+        "link_type": "external"
+      }
     }
   ]
 }
