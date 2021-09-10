@@ -12,7 +12,7 @@
          "available_api_versions" : [
             {
                "version" : "1.0.0",
-               "url" : "http://providers.optimade.org/index-metadbs/2dmatpedia/v1/"
+               "url" : "http://providers.optimade.org/index-metadbs/twodmatpedia/v1/"
             }
          ],
          "is_index" : true,
@@ -32,7 +32,7 @@
       "relationships" : {
          "default" : {
             "data" : {
-               "id" : "2dmatpedia",
+               "id" : "twodmatpedia",
                "type" : "links"
             }
          }
