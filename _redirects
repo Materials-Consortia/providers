@@ -14,3 +14,5 @@
 /index-metadbs/:providerid/versions /src/versions.csv 200!
 /index-metadbs/:providerid/:version/links /src/index-metadbs/:providerid/:version/links.json 200!
 /index-metadbs/:providerid/:version/info /src/index-metadbs/:providerid/:version/info.json 200!
+
+/index-metadbs/:providerid /src/index-metadbs/:providerid/:version/links.json 301!
