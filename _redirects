@@ -15,4 +15,4 @@
 /index-metadbs/:providerid/:version/links /src/index-metadbs/:providerid/:version/links.json 200!
 /index-metadbs/:providerid/:version/info /src/index-metadbs/:providerid/:version/info.json 200!
 
-/index-metadbs/:providerid /src/index-metadbs/:providerid/v1/links.json 301!
+/index-metadbs/:providerid /src/landing_page.html 200!
