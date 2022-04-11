@@ -1,0 +1,34 @@
+{
+   "meta" : {
+       "api_version" : "1.0.0",
+       "query" : {
+           "representation" : "/links"
+       },
+       "more_data_available" : false,
+       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
+   "data" : [
+      {
+         "id" : "cod",
+         "type" : "links",
+         "attributes" : {
+            "name": "CCP-NC Database",
+            "description": "The Collaborative Computational Project for NMR Crystallography (CCP-NC) Database hosts calculated NMR parameters submitted by users in the magres format.",
+            "base_url": "https://www.ccpnc.ac.uk/database/optimade/",
+            "homepage": "https://www.ccpnc.ac.uk/database/",
+            "link_type": "child"
+         }
+      },
+      {
+         "id" : "optimade-providers",
+         "type" : "links",
+         "attributes" : {
+            "name": "OPTIMADE Providers Index Meta-Database",
+            "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
+            "base_url": "https://providers.optimade.org",
+            "homepage": "https://www.optimade.org",
+            "link_type": "providers"
+         }
+      }
+   ]
+}
