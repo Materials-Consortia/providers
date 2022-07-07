@@ -16,6 +16,7 @@
             "description": "The Collaborative Computational Project for NMR Crystallography (CCP-NC) Database hosts calculated NMR parameters submitted by users in the magres format.",
             "base_url": null,
             "aggregate": "staging",
+            "homepage": "https://www.ccpnc.ac.uk/database",
             "link_type": "child"
          }
       },
