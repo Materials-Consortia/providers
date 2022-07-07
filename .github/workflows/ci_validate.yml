@@ -49,6 +49,7 @@ jobs:
     - name: Run validator for all local index meta-dbs
       run: |
         providers=$(find src/index-metadbs/ -maxdepth 1 -mindepth 1 -type d -printf ' %f' | cut -d / -f 3 )
+        sleep 10
         for provider in ${providers[@]}; do
           optimade-validator -vv --index https://${DEPLOY_PREVIEW}/index-metadbs/${provider}/v1/
         done

@@ -43,6 +43,17 @@
     },
     {
       "type": "links",
+      "id": "ccpnc",
+      "attributes": {
+        "name": "CCP-NC Database",
+        "description": "The Collaborative Computational Project for NMR Crystallography (CCP-NC) Database hosts calculated NMR parameters submitted by users in the magres format.",
+        "base_url": "http://providers.optimade.org/index-metadbs/ccpnc",
+        "homepage": "https://www.ccpnc.ac.uk/database",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "exmpl",
       "attributes": {
         "name": "Example provider",
