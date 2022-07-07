@@ -150,7 +150,7 @@ class ProvidersValidator(unittest.TestCase):
                                     response_content = query_optimade(info_endpoint)
                             else:
                                 raise
-                    except urllib.error.HTTPError as exc:
+                    except urllib.error.URLError as exc:
                         fallback_string = (
                             ""
                             if len(tested_info_endpoints) == 1
