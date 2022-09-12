@@ -1,42 +1,42 @@
 {
-   "meta" : {
-       "api_version" : "1.0.0",
-       "query" : {
-           "representation" : "/info"
-       },
-       "more_data_available" : false,
-       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   "meta": {
+      "api_version": "1.0.0",
+      "query": {
+         "representation": "/info"
+      },
+      "more_data_available": false,
+      "schema": "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
    },
-   "data" : {
-      "attributes" : {
-         "available_api_versions" : [
+   "data": {
+      "attributes": {
+         "available_api_versions": [
             {
-               "version" : "1.0.0",
-               "url" : "http://providers.optimade.org/index-metadbs/matterverse/v1/"
+               "version": "1.0.0",
+               "url": "http://providers.optimade.org/index-metadbs/matterverse/v1/"
             }
          ],
-         "is_index" : true,
-         "formats" : [
+         "is_index": true,
+         "formats": [
             "json"
          ],
-         "entry_types_by_format" : {
-            "json" : []
+         "entry_types_by_format": {
+            "json": []
          },
-         "available_endpoints" : [
+         "available_endpoints": [
             "info",
             "links"
          ],
-         "api_version" : "1.0.0"
+         "api_version": "1.0.0"
       },
-      "type" : "info",
-      "relationships" : {
-         "default" : {
-            "data" : {
-               "id" : "matterverse",
-               "type" : "links"
+      "type": "info",
+      "relationships": {
+         "default": {
+            "data": {
+               "id": "matterverse",
+               "type": "links"
             }
          }
       },
-      "id" : "/"
+      "id": "/"
    }
 }

@@ -1,17 +1,17 @@
 {
-   "meta" : {
-       "api_version" : "1.0.0",
-       "query" : {
-           "representation" : "/links"
-       },
-       "more_data_available" : false,
-       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   "meta": {
+      "api_version": "1.0.0",
+      "query": {
+         "representation": "/links"
+      },
+      "more_data_available": false,
+      "schema": "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
    },
-   "data" : [
+   "data": [
       {
-         "id" : "matterverse",
-         "type" : "links",
-         "attributes" : {
+         "id": "matterverse",
+         "type": "links",
+         "attributes": {
             "name": "Matterverse",
             "description": "Database of 31 million hypothetical materials generated through advanced machine learning algorithms",
             "base_url": null,
@@ -21,9 +21,9 @@
          }
       },
       {
-         "id" : "optimade-providers",
-         "type" : "links",
-         "attributes" : {
+         "id": "optimade-providers",
+         "type": "links",
+         "attributes": {
             "name": "OPTIMADE Providers Index Meta-Database",
             "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
             "base_url": "https://providers.optimade.org",
