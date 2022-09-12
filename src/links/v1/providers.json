@@ -119,6 +119,17 @@
       }
     },
     {
+        "type": "links",
+        "id": "matterverse",
+        "attributes":{
+            "name": "Matterverse",
+            "description": "Database of 31 million hypothetical materials generated through advanced machine learning algorithms",
+            "base_url": "https://providers.optimade.org/index-metadbs/matterverse",
+            "homepage": "https://matterverse.ai",
+            "link_type": "external"
+        }
+    },
+    {
       "type": "links",
       "id": "necro",
       "attributes": {
