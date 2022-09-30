@@ -13,7 +13,7 @@
          "type": "links",
          "attributes": {
             "name": "Matterverse",
-            "description": "Database of 31 million hypothetical materials generated through advanced machine learning algorithms",
+            "description": "Database of over 31 million hypothetical materials generated through advanced machine learning algorithms",
             "base_url": null,
             "aggregate": "staging",
             "homepage": "https://matterverse.ai",
