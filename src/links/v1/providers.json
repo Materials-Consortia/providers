@@ -124,7 +124,7 @@
       "attributes": {
         "name": "NecrOPTIMADE",
         "description": "A provider of ephemeral OPTIMADE APIs for static or archived data.",
-        "base_url": "https://necroptimade.herokuapp.com",
+        "base_url": null,
         "homepage": "https://github.com/ml-evs/necroptimade",
         "link_type": "external"
       }
