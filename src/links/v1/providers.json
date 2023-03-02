@@ -54,6 +54,17 @@
     },
     {
       "type": "links",
+      "id": "cmr",
+      "attributes": {
+        "name": "CMR Database",
+        "description": "Computational materials repository.",
+        "base_url": "https://cmr-optimade.fysik.dtu.dk",
+        "homepage": "https://cmr.fysik.dtu.dk",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "exmpl",
       "attributes": {
         "name": "Example provider",
