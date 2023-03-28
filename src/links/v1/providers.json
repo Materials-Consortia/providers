@@ -56,8 +56,8 @@
       "type": "links",
       "id": "cmr",
       "attributes": {
-        "name": "CMR Database",
-        "description": "Computational materials repository.",
+        "name": "Computational materials repository (CMR)",
+        "description": "CMR is a collection of materials repositories from different projects such as C2DB, QPOD and many more",
         "base_url": "https://cmr-optimade.fysik.dtu.dk",
         "homepage": "https://cmr.fysik.dtu.dk",
         "link_type": "external"
