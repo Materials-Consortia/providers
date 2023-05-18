@@ -9,12 +9,12 @@
    },
    "data" : [
       {
-         "id" : "dcgat",
+         "id" : "alexandria",
          "type" : "links",
          "attributes" : {
-            "name": "DCGAT",
+            "name": "alexandria",
             "description": "A new dataset of 415k stable and metastable materials calculated with the PBEsol and SCAN functionals",
-            "base_url": "https://dcgat.odbx.science",
+            "base_url": "https://alexandria.odbx.science",
             "homepage": "https://doi.org/10.24435/materialscloud:5j-9m",
             "link_type": "child"
          }
