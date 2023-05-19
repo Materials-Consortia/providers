@@ -32,6 +32,17 @@
     },
     {
       "type": "links",
+      "id": "alexandria",
+      "attributes": {
+        "name": "Alexandria",
+        "description": "A collection of databases from the group of Prof Miguel A. L. Marques at Ruhr University Bochum.",
+        "base_url": "https://providers.optimade.org/index-metadbs/alexandria",
+        "homepage": "http://tddft.org/bmg",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "cod",
       "attributes": {
         "name": "Crystallography Open Database",
