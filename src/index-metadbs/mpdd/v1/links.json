@@ -13,7 +13,7 @@
          "type": "links",
          "attributes": {
             "name": "Material-Property-Descriptor Database",
-            "description": "Material-Property-Descriptor Database (MPDD) of atomic structures. Optimized for the high-throughput deployment of material featurizers and ML models and maintained by Phases Research Lab (phaseslab.org) at The Pennsylvania State University",
+            "description": "Material-Property-Descriptor Database (MPDD) of atomic structures. Optimized for the high-throughput deployment of material featurizers and ML models. Maintained by Phases Research Lab (phaseslab.org) at The Pennsylvania State University",
             "base_url": "http://mpddoptimade.phaseslab.org",
             "homepage": "https://phaseslab.com/mpdd",
             "link_type": "child"
