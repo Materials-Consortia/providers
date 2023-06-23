@@ -1,0 +1,34 @@
+{
+   "meta": {
+       "api_version": "1.0.0",
+       "query": {
+           "representation": "/links"
+       },
+       "more_data_available": false,
+       "schema": "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
+   "data" : [
+      {
+         "id": "mpdd",
+         "type": "links",
+         "attributes": {
+            "name": "Material-Property-Descriptor Database",
+            "description": "Material-Property-Descriptor Database (MPDD) of atomic structures. Optimized for the high-throughput deployment of material featurizers and ML models and maintained by Phases Research Lab (phaseslab.org) at The Pennsylvania State University",
+            "base_url": "http://mpddoptimade.phaseslab.org",
+            "homepage": "https://phaseslab.com/mpdd",
+            "link_type": "child"
+         }
+      },
+      {
+         "id" : "optimade-providers",
+         "type": "links",
+         "attributes": {
+            "name": "OPTIMADE Providers Index Meta-Database",
+            "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
+            "base_url": "https://providers.optimade.org",
+            "homepage": "https://www.optimade.org",
+            "link_type": "providers"
+         }
+      }
+   ]
+}
