@@ -248,7 +248,7 @@
         "base_url": "http://providers.optimade.org/index-metadbs/stability",
         "homepage": "https://github.com/Materials-Consortia/optimade-stability-namespace",
         "link_type": "external"
-      },
+      }
     },
     {
       "type": "links",
