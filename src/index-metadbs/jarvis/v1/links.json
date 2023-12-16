@@ -17,7 +17,6 @@
             "base_url": "https://jarvis.nist.gov/optimade/jarvisdft",
             "homepage": "https://jarvis.nist.gov",
             "link_type": "child",
-            "aggregate": "staging"
          }
       },
       {
