@@ -15,7 +15,7 @@
       "api_version": "1.0.0",
       "available_api_versions": [
         {
-          "url": "https://www.optimade.org/providers/optimade/v1/",
+          "url": "http://mpod_optimade.cimav.edu.mx/",
           "version": "1.0.0"
         }
       ],
