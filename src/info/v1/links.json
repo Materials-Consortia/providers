@@ -14,7 +14,7 @@
          "attributes" : {
             "name": "Material Properties Open Database (MPOD)",
             "description": "MPOD is a web-based, open access repository of quantitative information about the physical properties of crystalline materials.",
-            "base_url": http://mpod_optimade.cimav.edu.mx/,
+            "base_url": "http://mpod_optimade.cimav.edu.mx/",
             "homepage": "http://mpod.cimav.edu.mx/",
             "link_type": "child"
          }
