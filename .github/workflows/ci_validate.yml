@@ -11,7 +11,7 @@ jobs:
     name: Check deploy preview is up
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Wait a maximum of 3 min for the preview site to be up
       run: .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 180
 
@@ -36,9 +36,9 @@ jobs:
     needs:
       check_deploy_preview
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
     - name: Install OPTIMADE
