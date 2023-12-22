@@ -32,7 +32,7 @@ The repository is organized this way:
 - `/src/info/<version>/info.json` is the proper response to the info endpoint formatted according to OPTIMADE version `<version>` and any later version that uses a format that is backward compatible with this version.
 
 - `/src/index-metadbs/<provider_name>/<version>/info.json` and `/src/index-metadbs/<provider_name>/<version>/links.json` are static Index Meta-Databases that are hosted in this repository for those providers that only have one main sub-database (or very few sub-databases) and do not wish to maintain one on their own.
-  See more details and instructions in `/src/index-metadbs/README.md`.
+  See more details and instructions in [`./src/index-metadbs/README.md`](./src/index-metadbs/README).
 
 - `/_redirects` specifies http rewrites to map index meta-database URLs `/<version>/info` and `/<version>/links` to the corresponding files under `src/`, as well as `/providers.json`.
   It also creates `/index-metadbs/<provider_name>/<version>/info.json` and `/index-metadbs/<provider_name>/<version>/links.json` URLs to point to the corresponding files in the `/src/index-metadbs` subfolders.
@@ -43,7 +43,7 @@ Hence, to update the list of providers, file a pull-request against the reposito
 
 ## Requirements to be listed in this providers list
 
-It is a policy of this providers list ([providers.optimade.org](http://providers.optimade.org)) that links inside `providers.json` must be links to an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/master/optimade.rst#index-meta-database).
+It is a policy of this providers list ([providers.optimade.org](https://providers.optimade.org)) that links inside `providers.json` must be links to an [OPTIMADE Index Meta-Database](https://github.com/Materials-Consortia/OPTIMADE/blob/master/optimade.rst#index-meta-database).
 
 If you only have one or few databases in your implementation, and you do not want to host an Index Meta-Database yourself, you can host the Index Meta-Database directly in this repository.
 You can find instructions [here](./src/index-metadbs).
