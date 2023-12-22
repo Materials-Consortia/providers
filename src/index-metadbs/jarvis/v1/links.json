@@ -16,7 +16,7 @@
             "description": "JARVIS-DFT is a materials property repository focused on density functional theory (DFT) predictions of material properties, especially for crystalline materials.",
             "base_url": "https://jarvis.nist.gov/optimade/jarvisdft",
             "homepage": "https://jarvis.nist.gov",
-            "link_type": "child",
+            "link_type": "child"
          }
       },
       {
