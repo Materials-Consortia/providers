@@ -120,6 +120,17 @@
     },
     {
       "type": "links",
+      "id": "mcloudarchive",
+      "attributes": {
+        "name": "Materials Cloud Archive",
+        "description": "Databases contributed by the community to the Materials Cloud Archive",
+        "base_url": "https://www.materialscloud.org/optimade/archive",
+        "homepage": "https://archive.materialscloud.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "mp",
       "attributes": {
         "name": "The Materials Project",
