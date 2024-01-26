@@ -175,12 +175,12 @@
     },
     {
       "type": "links",
-      "id": "necro",
+      "id": "optimake",
       "attributes": {
-        "name": "NecrOPTIMADE",
-        "description": "A provider of ephemeral OPTIMADE APIs for static or archived data.",
+        "name": "optimake",
+        "description": "A tool for turning static data into OPTIMADE APIs",
         "base_url": null,
-        "homepage": "https://github.com/ml-evs/necroptimade",
+        "homepage": "https://github.com/materialscloud-org/optimade-maker",
         "link_type": "external"
       }
     },
