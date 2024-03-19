@@ -124,7 +124,7 @@
       "attributes": {
         "name": "Matterverse",
         "description": "Database of M3GNet predicted properties for over 31 million hypothetical materials and all materials in the Materials Project.",
-        "base_url": "https://optimade.matterverse.ai",
+        "base_url": "https://providers.optimade.org/index-metadbs/matterverse",
         "homepage": "https://matterverse.ai",
         "link_type": "external"
       }
