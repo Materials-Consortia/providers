@@ -1,0 +1,34 @@
+{
+   "meta" : {
+       "api_version" : "1.0.0",
+       "query" : {
+           "representation" : "/links"
+       },
+       "more_data_available" : false,
+       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+   },
+   "data" : [
+      {
+         "id": "daics",
+         "type": "links",
+         "attributes": {
+         "name": "Database of Ab Initio Crystal Structures",
+         "description": "The Database of Ab Initio Crystal Structures (DAICS) encompasses a vast collection of both theoretical and experimental crystal structures calculated using Density Functional Theory (DFT), with the VASP code.",
+         "base_url": "https://core.daics.net/Optimade/v1/",
+         "homepage": "https://www.daics.net/",
+	 "link_type": "child"
+         }
+      },
+      {
+         "id" : "optimade-providers",
+         "type" : "links",
+         "attributes" : {
+            "name": "OPTIMADE Providers Index Meta-Database",
+            "description": "The list of OPTIMADE providers maintained by Materials-Consortia",
+            "base_url": "https://providers.optimade.org",
+            "homepage": "https://www.optimade.org",
+            "link_type": "providers"
+         }
+      }
+   ]
+}

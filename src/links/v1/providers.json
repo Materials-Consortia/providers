@@ -79,7 +79,7 @@
       "id": "daics",
       "attributes": {
         "name": "Database of Ab Initio Crystal Structures",
-        "description": "The Database of Ab Initio Crystal Structures (DAICS) encompasses a vast collection of both theoretical and experimental crystal structures. These structures have been calculated using Density Functional Theory (DFT), with the VASP code.",
+        "description": "The Database of Ab Initio Crystal Structures (DAICS) encompasses a vast collection of both theoretical and experimental crystal structures calculated using Density Functional Theory (DFT), with the VASP code.",
         "base_url": "https://core.daics.net/Optimade/v1/",
         "homepage": "https://www.daics.net/",
         "link_type": "external"
