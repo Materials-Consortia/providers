@@ -15,7 +15,7 @@
         "name": "AiiDA",
         "description": "Automated Interactive Infrastructure and Database for Computational Science (AiiDA)",
         "base_url": null,
-        "homepage": "http://www.aiida.net",
+        "homepage": "https://www.aiida.net",
         "link_type": "external"
       }
     },
@@ -26,7 +26,18 @@
         "name": "AFLOW",
         "description": "Automatic FLOW (AFLOW) database for computational materials science",
         "base_url": "https://providers.optimade.org/index-metadbs/aflow",
-        "homepage": "http://aflow.org",
+        "homepage": "https://aflow.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "alexandria",
+      "attributes": {
+        "name": "Alexandria",
+        "description": "A collection of databases from the group of Prof Miguel A. L. Marques at Ruhr University Bochum.",
+        "base_url": "https://providers.optimade.org/index-metadbs/alexandria",
+        "homepage": "https://tddft.org/bmg",
         "link_type": "external"
       }
     },
@@ -35,8 +46,8 @@
       "id": "cod",
       "attributes": {
         "name": "Crystallography Open Database",
-        "description": "Open-access collection of crystal structures of organic, inorganic, metal-organics compounds and minerals, excluding biopolymers",
-        "base_url": "http://providers.optimade.org/index-metadbs/cod",
+        "description": "Open-access collection of crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers",
+        "base_url": "https://providers.optimade.org/index-metadbs/cod",
         "homepage": "https://www.crystallography.net/cod",
         "link_type": "external"
       }
@@ -47,8 +58,19 @@
       "attributes": {
         "name": "CCP-NC Database",
         "description": "The Collaborative Computational Project for NMR Crystallography (CCP-NC) Database hosts calculated NMR parameters submitted by users in the magres format.",
-        "base_url": "http://providers.optimade.org/index-metadbs/ccpnc",
+        "base_url": null,
         "homepage": "https://www.ccpnc.ac.uk/database",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "cmr",
+      "attributes": {
+        "name": "Computational materials repository (CMR)",
+        "description": "CMR is a collection of materials repositories from different projects such as C2DB, QPOD and many more",
+        "base_url": "https://providers.optimade.org/index-metadbs/cmr",
+        "homepage": "https://cmr.fysik.dtu.dk",
         "link_type": "external"
       }
     },
@@ -58,7 +80,7 @@
       "attributes": {
         "name": "Example provider",
         "description": "Provider used for examples, not to be assigned to a real database",
-        "base_url": "http://providers.optimade.org/index-metadbs/exmpl",
+        "base_url": "https://providers.optimade.org/index-metadbs/exmpl",
         "homepage": "https://example.com",
         "link_type": "external"
       }
@@ -91,8 +113,19 @@
       "attributes": {
         "name": "Materials Cloud",
         "description": "A platform for Open Science built for seamless sharing of resources in computational materials science",
-        "base_url": "https://www.materialscloud.org/optimade",
+        "base_url": "https://www.materialscloud.org/optimade/main",
         "homepage": "https://www.materialscloud.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "mcloudarchive",
+      "attributes": {
+        "name": "Materials Cloud Archive",
+        "description": "Databases contributed by the community to the Materials Cloud Archive",
+        "base_url": "https://www.materialscloud.org/optimade/archive",
+        "homepage": "https://archive.materialscloud.org",
         "link_type": "external"
       }
     },
@@ -102,8 +135,19 @@
       "attributes": {
         "name": "The Materials Project",
         "description": "An open database of computed materials properties to accelerate materials discovery and design",
-        "base_url": "http://providers.optimade.org/index-metadbs/mp",
+        "base_url": "https://providers.optimade.org/index-metadbs/mp",
         "homepage": "https://www.materialsproject.org",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "mpdd",
+      "attributes": {
+        "name": "Material-Property-Descriptor Database",
+        "description": "Material-Property-Descriptor Database (MPDD) of atomic structures. Optimized for the high-throughput deployment of material featurizers and ML models. Maintained by Phases Research Lab (phaseslab.org) at The Pennsylvania State University",
+        "base_url": "https://providers.optimade.org/index-metadbs/mpdd",
+        "homepage": "https://www.phaseslab.com/mpdd",
         "link_type": "external"
       }
     },
@@ -131,12 +175,23 @@
     },
     {
       "type": "links",
-      "id": "necro",
+      "id": "mpod",
       "attributes": {
-        "name": "NecrOPTIMADE",
-        "description": "A provider of ephemeral OPTIMADE APIs for static or archived data.",
-        "base_url": "https://necroptimade.herokuapp.com",
-        "homepage": "https://github.com/ml-evs/necroptimade",
+        "name": "Material Properties Open Database (MPOD)",
+        "description": "The Material Properties Open Database (MPOD) is a web-based, open access repository of quantitative information about the physical properties of crystalline materials. MPOD is oriented to design engineers, scientists, science teachers and students. Properties are generally treated as tensor magnitudes. In MPOD the compact matrix notation is applied. To bring an intuitive view of tensor properties, so-called longitudinal properties surfaces are displayed. 3D printing of properties surfaces is implemented via creation of stl files. A dictionary of properties definitions is included. Eventually, comments are added. Syntax and notation in MPOD files is oriented towards matching IUCr standards and so tries to comply with CIF format.",
+        "base_url": "https://providers.optimade.org/index-metadbs/mpod",
+        "homepage": "http://mpod.cimav.edu.mx",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "optimake",
+      "attributes": {
+        "name": "optimake",
+        "description": "A tool for turning static data into OPTIMADE APIs",
+        "base_url": null,
+        "homepage": "https://github.com/materialscloud-org/optimade-maker",
         "link_type": "external"
       }
     },
@@ -169,7 +224,7 @@
         "name": "Open Materials Database",
         "description": "The Open Materials Database (omdb) is a database of materials properties maintained by the developers of the High-Throughput Toolkit (httk). It enables easy access to useful materials data, in particular via programmatic interaction using this toolkit.",
         "base_url": "https://optimade-index.openmaterialsdb.se",
-        "homepage": "http://openmaterialsdb.se",
+        "homepage": "https://openmaterialsdb.se",
         "link_type": "external"
       }
     },
@@ -190,8 +245,8 @@
       "attributes": {
         "name": "The Open Quantum Materials Database (OQMD)",
         "description": "The OQMD is a database of DFT calculated thermodynamic and structural properties of materials",
-        "base_url": "http://providers.optimade.org/index-metadbs/oqmd",
-        "homepage": "http://oqmd.org",
+        "base_url": "https://providers.optimade.org/index-metadbs/oqmd",
+        "homepage": "https://oqmd.org",
         "link_type": "external"
       }
     },
@@ -201,7 +256,7 @@
       "attributes": {
         "name": "Joint Automated Repository for Various Integrated Simulations (JARVIS)",
         "description": "JARVIS is a repository designed to automate materials discovery using classical force-field, density functional theory, machine learning calculations and experiments.",
-        "base_url": "http://providers.optimade.org/index-metadbs/jarvis",
+        "base_url": "https://providers.optimade.org/index-metadbs/jarvis",
         "homepage": "https://jarvis.nist.gov",
         "link_type": "external"
       }
@@ -223,7 +278,7 @@
       "attributes": {
         "name": "Theoretical Crystallography Open Database",
         "description": "Open-access collection of theoretically calculated or refined crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers",
-        "base_url": "http://providers.optimade.org/index-metadbs/tcod",
+        "base_url": "https://providers.optimade.org/index-metadbs/tcod",
         "homepage": "https://www.crystallography.net/tcod",
         "link_type": "external"
       }
@@ -234,7 +289,7 @@
       "attributes": {
         "name": "2DMatpedia",
         "description": "2DMatpedia, an open computational database of two-dimensional materials from top-down and bottom-up approaches",
-        "base_url": "http://providers.optimade.org/index-metadbs/twodmatpedia",
+        "base_url": "https://providers.optimade.org/index-metadbs/twodmatpedia",
         "homepage": "http://2dmatpedia.org",
         "link_type": "external"
       }

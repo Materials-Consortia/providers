@@ -14,8 +14,8 @@
          "attributes" : {
             "name": "AFLOW",
             "description": "The AFLOW OPTIMADE endpoint",
-            "base_url": "http://aflow.org/API/optimade/",
-            "homepage": "http://aflow.org",
+            "base_url": "https://aflow.org/API/optimade/",
+            "homepage": "https://aflow.org",
             "link_type": "child"
          }
       },

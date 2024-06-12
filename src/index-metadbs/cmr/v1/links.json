@@ -9,13 +9,13 @@
    },
    "data" : [
       {
-         "id" : "jarvis",
+         "id" : "cmr",
          "type" : "links",
          "attributes" : {
-            "name": "JARVIS-DFT",
-            "description": "JARVIS-DFT is a materials property repository focused on density functional theory (DFT) predictions of material properties, especially for crystalline materials.",
-            "base_url": "https://jarvis.nist.gov/optimade/jarvisdft",
-            "homepage": "https://jarvis.nist.gov",
+             "name": "Computational materials repository (CMR)",
+             "description": "CMR is a collection of materials repositories from different projects such as C2DB, QPOD and many more",
+            "base_url": "https://cmr-optimade.fysik.dtu.dk",
+            "homepage": "https://cmr.fysik.dtu.dk",
             "link_type": "child"
          }
       },

@@ -9,13 +9,24 @@
    },
    "data" : [
       {
-         "id" : "jarvis",
+         "id" : "alexandria-pbesol",
          "type" : "links",
          "attributes" : {
-            "name": "JARVIS-DFT",
-            "description": "JARVIS-DFT is a materials property repository focused on density functional theory (DFT) predictions of material properties, especially for crystalline materials.",
-            "base_url": "https://jarvis.nist.gov/optimade/jarvisdft",
-            "homepage": "https://jarvis.nist.gov",
+            "name": "alexandria",
+            "description": "A new dataset of 415k stable and metastable materials calculated with the PBEsol and SCAN functionals",
+            "base_url": "https://alexandria.icams.rub.de/pbesol",
+            "homepage": "https://tddft.org/bmg/data.php",
+            "link_type": "child"
+         }
+      },
+      {
+         "id" : "alexandria-pbe",
+         "type" : "links",
+         "attributes" : {
+            "name": "alexandria",
+            "description": "A dataset of 2.5m+ stable and metastable materials calculated with the PBE functional",
+            "base_url": "https://alexandria.icams.rub.de/pbe",
+            "homepage": "https://tddft.org/bmg/data.php",
             "link_type": "child"
          }
       },

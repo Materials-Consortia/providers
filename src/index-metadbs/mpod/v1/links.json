@@ -9,13 +9,13 @@
    },
    "data" : [
       {
-         "id" : "jarvis",
+         "id" : "mpod",
          "type" : "links",
          "attributes" : {
-            "name": "JARVIS-DFT",
-            "description": "JARVIS-DFT is a materials property repository focused on density functional theory (DFT) predictions of material properties, especially for crystalline materials.",
-            "base_url": "https://jarvis.nist.gov/optimade/jarvisdft",
-            "homepage": "https://jarvis.nist.gov",
+            "name": "Material Properties Open Database (MPOD)",
+            "description": "MPOD is a web-based, open access repository of quantitative information about the physical properties of crystalline materials.",
+            "base_url": "http://mpod_optimade.cimav.edu.mx",
+            "homepage": "http://mpod.cimav.edu.mx",
             "link_type": "child"
          }
       },

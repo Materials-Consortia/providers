@@ -12,7 +12,7 @@
          "available_api_versions" : [
             {
                "version" : "1.0.0",
-               "url" : "https://providers.optimade.org/index-metadbs/ccpnc/v1/"
+               "url" : "https://providers.optimade.org/index-metadbs/alexandria/v1/"
             }
          ],
          "is_index" : true,
@@ -32,7 +32,7 @@
       "relationships" : {
          "default" : {
             "data" : {
-               "id" : "ccpnc",
+               "id" : "alexandria",
                "type" : "links"
             }
          }
