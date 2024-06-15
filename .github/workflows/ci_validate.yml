@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Wait a maximum of 3 min for the preview site to be up
-      run: sleep 180
+    - name: Wait a maximum of 3 min for the info endpoint of the preview site to be up
+      # Note that it seems that netlify comes up without the info endpoint being ready, so we need to test explicitly for it
+      run: curl --head -X GET --retry 10 --retry-connrefused --retry-delay 18 https://${DEPLOY_PREVIEW}/v1/info/ || exit 1
 
   validate_provider_list:
     name: Provider index meta-db
