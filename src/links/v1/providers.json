@@ -43,6 +43,17 @@
     },
     {
       "type": "links",
+      "id": "ccdc",
+      "attributes": {
+        "name": "Cambridge Crystallographic Data Centre",
+        "description": "A namespace for OPTIMADE-compliant entries and properties from the Cambridge Crystallographic Data Centre (CCDC).",
+        "base_url": null,
+        "homepage": "https://www.ccdc.cam.ac.uk",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "cod",
       "attributes": {
         "name": "Crystallography Open Database",
