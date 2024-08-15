@@ -1,13 +1,13 @@
 {
-   "meta" : {
-       "api_version" : "1.0.0",
-       "query" : {
-           "representation" : "/links"
-       },
-       "more_data_available" : false,
-       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
-   },
-   "data": [
+  "meta": {
+    "api_version": "1.0.0",
+    "query": {
+      "representation": "/links"
+    },
+    "more_data_available": false,
+    "schema": "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+  },
+  "data": [
     {
       "type": "links",
       "id": "aiida",
@@ -159,6 +159,17 @@
         "description": "A highly curated Pauling File dataset based on ~0.5M publications and backing up Springer Materials, ICDD PDF, ASM APD, MedeA, Pearson Crystal Data, AtomWork Advanced, etc.",
         "base_url": "https://providers.optimade.org/index-metadbs/mpds",
         "homepage": "https://mpds.io",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "matterverse",
+      "attributes": {
+        "name": "Matterverse",
+        "description": "Database of machine learning property predictions for over 31 million hypothetical materials and materials in the Materials Project.",
+        "base_url": "https://providers.optimade.org/index-metadbs/matterverse",
+        "homepage": "https://matterverse.ai",
         "link_type": "external"
       }
     },
