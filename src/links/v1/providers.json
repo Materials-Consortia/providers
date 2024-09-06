@@ -274,6 +274,17 @@
     },
     {
       "type": "links",
+      "id": "stability",
+      "attributes": {
+        "name": "Stability namespace",
+        "description": "A namespace for sharing definitions of computed or measured compound stability data, such as formation energies and convex hull distances.",
+        "base_url": "http://providers.optimade.org/index-metadbs/stability",
+        "homepage": "https://github.com/Materials-Consortia/optimade-stability-namespace",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "tcod",
       "attributes": {
         "name": "Theoretical Crystallography Open Database",
