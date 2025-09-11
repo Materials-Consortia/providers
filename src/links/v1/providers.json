@@ -37,7 +37,7 @@
         "name": "Alexandria",
         "description": "A collection of databases from the group of Prof Miguel A. L. Marques at Ruhr University Bochum.",
         "base_url": "https://providers.optimade.org/index-metadbs/alexandria",
-        "homepage": "https://tddft.org/bmg",
+        "homepage": "https://alexandria.icams.rub.de",
         "link_type": "external"
       }
     },

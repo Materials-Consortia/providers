@@ -15,7 +15,7 @@
             "name": "alexandria",
             "description": "A new dataset of 415k stable and metastable materials calculated with the PBEsol and SCAN functionals",
             "base_url": "https://alexandria.icams.rub.de/pbesol",
-            "homepage": "https://tddft.org/bmg/data.php",
+            "homepage": "https://alexandria.icams.rub.de",
             "link_type": "child"
          }
       },
@@ -26,7 +26,7 @@
             "name": "alexandria",
             "description": "A dataset of 2.5m+ stable and metastable materials calculated with the PBE functional",
             "base_url": "https://alexandria.icams.rub.de/pbe",
-            "homepage": "https://tddft.org/bmg/data.php",
+            "homepage": "https://alexandria.icams.rub.de",
             "link_type": "child"
          }
       },
