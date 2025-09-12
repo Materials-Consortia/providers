@@ -21,7 +21,7 @@ jobs:
     needs:
       check_deploy_preview
     steps:
-    - uses: Materials-Consortia/optimade-validator-action@v2
+    - uses: Materials-Consortia/optimade-validator-action@master
       with:
         index: yes
         protocol: https
