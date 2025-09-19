@@ -1,13 +1,13 @@
 {
-   "meta" : {
-       "api_version" : "1.0.0",
-       "query" : {
-           "representation" : "/links"
-       },
-       "more_data_available" : false,
-       "schema" : "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
-   },
-   "data": [
+  "meta": {
+    "api_version": "1.0.0",
+    "query": {
+      "representation": "/links"
+    },
+    "more_data_available": false,
+    "schema": "https://schemas.optimade.org/openapi/v1.0/optimade_index.json"
+  },
+  "data": [
     {
       "type": "links",
       "id": "aiida",
@@ -37,7 +37,18 @@
         "name": "Alexandria",
         "description": "A collection of databases from the group of Prof Miguel A. L. Marques at Ruhr University Bochum.",
         "base_url": "https://providers.optimade.org/index-metadbs/alexandria",
-        "homepage": "https://tddft.org/bmg",
+        "homepage": "https://alexandria.icams.rub.de",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "ccdc",
+      "attributes": {
+        "name": "Cambridge Crystallographic Data Centre",
+        "description": "A namespace for OPTIMADE-compliant entries and properties from the Cambridge Crystallographic Data Centre (CCDC).",
+        "base_url": null,
+        "homepage": "https://www.ccdc.cam.ac.uk",
         "link_type": "external"
       }
     },
@@ -175,6 +186,17 @@
     },
     {
       "type": "links",
+      "id": "matterverse",
+      "attributes": {
+        "name": "Matterverse",
+        "description": "Database of machine learning property predictions for over 31 million hypothetical materials and materials in the Materials Project.",
+        "base_url": "https://providers.optimade.org/index-metadbs/matterverse",
+        "homepage": "https://matterverse.ai",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "mpod",
       "attributes": {
         "name": "Material Properties Open Database (MPOD)",
@@ -269,6 +291,17 @@
         "description": "",
         "base_url": null,
         "homepage": null,
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
+      "id": "psdi",
+      "attributes": {
+        "name": "Physical Sciences Data Infrastructure",
+        "description": "A namespace for properties and data related to the Physical Sciences Data Infrastructure (PSDI), UK-based integrated data instructure for the Physical Sciences.",
+        "base_url": null,
+        "homepage": "https://www.psdi.ac.uk",
         "link_type": "external"
       }
     },
