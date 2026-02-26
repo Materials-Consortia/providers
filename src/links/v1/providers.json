@@ -287,9 +287,9 @@
       "type": "links",
       "id": "psdi",
       "attributes": {
-        "name": "Physical Sciences Data Infrastructure",
-        "description": "A namespace for properties and data related to the Physical Sciences Data Infrastructure (PSDI), UK-based integrated data instructure for the Physical Sciences.",
-        "base_url": null,
+        "name": "Physical Sciences Data Infrastructure (PSDI)",
+        "description": "The Physical Sciences Data Infrastructure (PSDI) is an integrated data infrastructure that directly supports researchers in the physical sciences in the UK to manage, transform and share their data led by the Science and Technology Facilities Council (STFC) and the University of Southampton. As part of this ecosystem, PSDI serves as an OPTIMADE provider to make some data sources available via OPTIMADE endpoints.",
+        "base_url": "https://metadata.psdi.ac.uk/optimade-index-metadb",
         "homepage": "https://www.psdi.ac.uk",
         "link_type": "external"
       }
