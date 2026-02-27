@@ -76,6 +76,17 @@
     },
     {
       "type": "links",
+      "id": "cheminfo",
+      "attributes": {
+        "name": "Cheminformatics namespace",
+        "description": "A namespace for sharing definitions of cheminformatics properties.",
+        "base_url": "http://providers.optimade.org/index-metadbs/cheminfo",
+        "homepage": "https://github.com/Materials-Consortia/namespace-cheminformatics",
+        "link_type": "external"
+      }
+    },
+    {
+      "type": "links",
       "id": "cmr",
       "attributes": {
         "name": "Computational materials repository (CMR)",
