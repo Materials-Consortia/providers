@@ -13,9 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Wait a maximum of 3 min for the preview site to be up
-      # We now append the /v1/info endpoint to the URL as it seems that the static landing page responds much more quickly than the JSON API
-      # leading to race conditions
-      run: .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}/v1/info" --port=443 -t 180
+      run: sleep 10 && .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 180
 
   validate_provider_list:
     name: Provider index meta-db
