@@ -39,7 +39,7 @@ wait_for()
             echoerr "$cmdname: $HOST:$PORT is available after $((end_ts - start_ts)) seconds"
             break
         fi
-        sleep 1
+        sleep 10
     done
     return $result
 }
