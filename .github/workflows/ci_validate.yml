@@ -11,9 +11,9 @@ jobs:
     name: Check deploy preview is up
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Wait a maximum of 3 min for the preview site to be up
-      run: .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 180
+      run: sleep 10 && .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 180
 
   validate_provider_list:
     name: Provider index meta-db
@@ -31,14 +31,16 @@ jobs:
         verbosity: 2
 
   validate_local_index_dbs:
-    name: All local index meta-dbs
+    name: New local index meta-dbs
     runs-on: ubuntu-latest
     needs:
       check_deploy_preview
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
     - name: Install OPTIMADE
@@ -46,10 +48,51 @@ jobs:
         python -m pip install --upgrade pip
         pip install -U setuptools
         pip install optimade
-    - name: Run validator for all local index meta-dbs
+    - name: Run validator for new local index meta-dbs
+      env:
+        BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        HEAD_SHA: ${{ github.event.pull_request.head.sha }}
       run: |
-        providers=$(find src/index-metadbs/ -maxdepth 1 -mindepth 1 -type d -printf ' %f' | cut -d / -f 3 )
+        providers=$(comm -13 \
+          <(git ls-tree -d --name-only "${BASE_SHA}:src/index-metadbs" | sort) \
+          <(git ls-tree -d --name-only "${HEAD_SHA}:src/index-metadbs" | sort))
         sleep 10
-        for provider in ${providers[@]}; do
+        for provider in ${providers}; do
           optimade-validator -vv --index https://${DEPLOY_PREVIEW}/index-metadbs/${provider}/v1/
+        done
+
+  validate_new_providers:
+    name: New provider index meta-dbs
+    runs-on: ubuntu-latest
+    needs:
+      check_deploy_preview
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.9
+    - name: Install OPTIMADE
+      run: |
+        python -m pip install --upgrade pip
+        pip install -U setuptools
+        pip install optimade
+    - name: Run validator for new provider index meta-dbs
+      env:
+        BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      run: |
+        providers=$(comm -13 \
+          <(git show "${BASE_SHA}:src/links/v1/providers.json" | jq -r '.data[].id' | sort) \
+          <(git show "${HEAD_SHA}:src/links/v1/providers.json" | jq -r '.data[].id' | sort))
+        sleep 10
+        for provider in ${providers}; do
+          base_url=$(git show "${HEAD_SHA}:src/links/v1/providers.json" \
+            | jq -r --arg provider "${provider}" '.data[] | select(.id == $provider) | .attributes.base_url // empty')
+          if [[ -n "${base_url}" ]]; then
+            base_url=${base_url/https:\/\/providers.optimade.org/https:\/\/${DEPLOY_PREVIEW}}
+            optimade-validator -vv --index "${base_url%/}/v1/"
+          fi
         done
