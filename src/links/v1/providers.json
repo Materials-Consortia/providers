@@ -326,6 +326,17 @@
         "homepage": "https://atomgpt.org",
         "link_type": "external"
       }
-    }
+    },
+    {
+      "type": "links",
+      "id": "anyterial",
+      "attributes": {
+        "name": "Anyterial",
+        "description": "Anyterial is a collection of open databases associated with the high-throughput toolkit (httk)",
+        "base_url": "https://optimade-index.anyterial.se",
+        "homepage": "https://www.anyterial.se",
+        "link_type": "external"
+      }
+    }      
   ]
 }
