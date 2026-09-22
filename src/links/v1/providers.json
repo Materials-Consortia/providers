@@ -101,9 +101,9 @@
       "id": "httk",
       "attributes": {
         "name": "The High-Throughput Toolkit",
-        "description": "Prefix for implementation-specific identifiers used in the httk implementation at http://httk.org/",
+        "description": "Prefix for implementation-specific identifiers used in the high-throughput toolkit (httk)",
         "base_url": null,
-        "homepage": null,
+        "homepage": "https://www.httk.org",
         "link_type": "external"
       }
     },
