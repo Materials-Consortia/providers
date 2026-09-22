@@ -92,7 +92,9 @@ jobs:
           base_url=$(git show "${HEAD_SHA}:src/links/v1/providers.json" \
             | jq -r --arg provider "${provider}" '.data[] | select(.id == $provider) | .attributes.base_url // empty')
           if [[ -n "${base_url}" ]]; then
-            base_url=${base_url/https:\/\/providers.optimade.org/https:\/\/${DEPLOY_PREVIEW}}
+            if git cat-file -e "${HEAD_SHA}:src/index-metadbs/${provider}" 2>/dev/null; then
+              base_url="https://${DEPLOY_PREVIEW}/index-metadbs/${provider}"
+            fi
             optimade-validator -vv --index "${base_url%/}/v1/"
           fi
         done
