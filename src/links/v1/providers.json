@@ -326,6 +326,17 @@
         "homepage": "https://atomgpt.org",
         "link_type": "external"
       }
+    },
+    {
+      "type": "links",
+      "id": "broken",
+      "attributes": {
+        "name": "Broken",
+        "description": "This is a deliberately broken index meta-db to check that our CI works",
+        "base_url": "https://example.org/broken_optimade_index_meta_db",
+        "homepage": "https://www.example.org",
+        "link_type": "external"
+      }
     }
   ]
 }
