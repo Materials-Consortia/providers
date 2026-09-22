@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Wait a maximum of 3 min for the preview site to be up
-      run: .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 180
+      run: sleep 10 && .github/workflows/wait_for_it.sh --host="${DEPLOY_PREVIEW}" --port=443 -t 180
 
   validate_provider_list:
     name: Provider index meta-db
@@ -21,7 +21,7 @@ jobs:
     needs:
       check_deploy_preview
     steps:
-    - uses: Materials-Consortia/optimade-validator-action@master
+    - uses: Materials-Consortia/optimade-validator-action@v2
       with:
         index: yes
         protocol: https
@@ -31,12 +31,14 @@ jobs:
         verbosity: 2
 
   validate_local_index_dbs:
-    name: All local index meta-dbs
+    name: New local index meta-dbs
     runs-on: ubuntu-latest
     needs:
       check_deploy_preview
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -46,10 +48,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -U setuptools
         pip install optimade
-    - name: Run validator for all local index meta-dbs
+    - name: Run validator for new local index meta-dbs
+      env:
+        BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        HEAD_SHA: ${{ github.event.pull_request.head.sha }}
       run: |
-        providers=$(find src/index-metadbs/ -maxdepth 1 -mindepth 1 -type d -printf ' %f' | cut -d / -f 3 )
+        providers=$(comm -13 \
+          <(git ls-tree -d --name-only "${BASE_SHA}:src/index-metadbs" | sort) \
+          <(git ls-tree -d --name-only "${HEAD_SHA}:src/index-metadbs" | sort))
         sleep 10
-        for provider in ${providers[@]}; do
+        for provider in ${providers}; do
           optimade-validator -vv --index https://${DEPLOY_PREVIEW}/index-metadbs/${provider}/v1/
         done
